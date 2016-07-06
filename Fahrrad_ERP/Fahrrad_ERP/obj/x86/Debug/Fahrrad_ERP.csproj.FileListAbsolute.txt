@@ -15,7 +15,6 @@ C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Passwort.resources
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.csprojResolveAssemblyReference.cache
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Anmeldung.resources
-C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Mitarbeiter_sehen.resources
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.eigeneDaten.resources
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\bin\Debug\Fahrrad_ERP.exe.config
 E:\Software M\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\bin\Debug\Fahrrad_ERP.exe.config
@@ -33,4 +32,8 @@ E:\Software M\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Properti
 E:\Software M\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.csproj.GenerateResource.Cache
 E:\Software M\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\bin\Debug\MySql.Data.dll
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\bin\Debug\MySql.Data.dll
-C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Mitarbeiter.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Geschäftsdaten.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Mitarbeiter_ändern.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Mitarbeiter_Ansicht.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Rechnung.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Bestellung_wählen.resources

@@ -75,6 +75,12 @@
     <Compile Include="Anmeldung.Designer.cs">
       <DependentUpon>Anmeldung.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bestellung_wählen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bestellung_wählen.Designer.cs">
+      <DependentUpon>Bestellung_wählen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database_Fahrrad.cs" />
     <Compile Include="eigeneDaten.cs">
       <SubType>Form</SubType>
@@ -82,11 +88,18 @@
     <Compile Include="eigeneDaten.Designer.cs">
       <DependentUpon>eigeneDaten.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mitarbeiter.cs">
+    <Compile Include="Geschäftsdaten.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mitarbeiter.Designer.cs">
-      <DependentUpon>Mitarbeiter.cs</DependentUpon>
+    <Compile Include="Geschäftsdaten.Designer.cs">
+      <DependentUpon>Geschäftsdaten.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewColumnSorter.cs" />
+    <Compile Include="Mitarbeiter_ändern.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mitarbeiter_ändern.Designer.cs">
+      <DependentUpon>Mitarbeiter_ändern.cs</DependentUpon>
     </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
@@ -94,11 +107,11 @@
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mitarbeiter_sehen.cs">
+    <Compile Include="Mitarbeiter_Ansicht.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mitarbeiter_sehen.Designer.cs">
-      <DependentUpon>Mitarbeiter_sehen.cs</DependentUpon>
+    <Compile Include="Mitarbeiter_Ansicht.Designer.cs">
+      <DependentUpon>Mitarbeiter_Ansicht.cs</DependentUpon>
     </Compile>
     <Compile Include="Passwort.cs">
       <SubType>Form</SubType>
@@ -108,21 +121,33 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rechnung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rechnung.Designer.cs">
+      <DependentUpon>Rechnung.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <EmbeddedResource Include="Anmeldung.resx">
       <DependentUpon>Anmeldung.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Bestellung_wählen.resx">
+      <DependentUpon>Bestellung_wählen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="eigeneDaten.resx">
       <DependentUpon>eigeneDaten.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mitarbeiter.resx">
-      <DependentUpon>Mitarbeiter.cs</DependentUpon>
+    <EmbeddedResource Include="Geschäftsdaten.resx">
+      <DependentUpon>Geschäftsdaten.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mitarbeiter_ändern.resx">
+      <DependentUpon>Mitarbeiter_ändern.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mitarbeiter_sehen.resx">
-      <DependentUpon>Mitarbeiter_sehen.cs</DependentUpon>
+    <EmbeddedResource Include="Mitarbeiter_Ansicht.resx">
+      <DependentUpon>Mitarbeiter_Ansicht.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Passwort.resx">
       <DependentUpon>Passwort.cs</DependentUpon>
@@ -136,6 +161,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Rechnung.resx">
+      <DependentUpon>Rechnung.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

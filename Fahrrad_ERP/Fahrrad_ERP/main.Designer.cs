@@ -91,6 +91,8 @@
             this.materialstammdatenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anlegenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bearbeitenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.geschäftsdatenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.cascadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tileVerticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -484,7 +486,9 @@
             this.lagerToolStripMenuItem,
             this.rechnungswesenToolStripMenuItem,
             this.toolStripSeparator9,
-            this.stammdatenToolStripMenuItem});
+            this.stammdatenToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.geschäftsdatenToolStripMenuItem});
             this.verwaltungMenu.Name = "verwaltungMenu";
             this.verwaltungMenu.Size = new System.Drawing.Size(79, 20);
             this.verwaltungMenu.Text = "&Verwaltung";
@@ -525,7 +529,7 @@
             this.anlegenToolStripMenuItem4,
             this.bearbeitenToolStripMenuItem4});
             this.aufträgeToolStripMenuItem1.Name = "aufträgeToolStripMenuItem1";
-            this.aufträgeToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+            this.aufträgeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.aufträgeToolStripMenuItem1.Text = "&Aufträge";
             // 
             // anlegenToolStripMenuItem4
@@ -543,8 +547,9 @@
             // rechnungenToolStripMenuItem
             // 
             this.rechnungenToolStripMenuItem.Name = "rechnungenToolStripMenuItem";
-            this.rechnungenToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.rechnungenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.rechnungenToolStripMenuItem.Text = "&Rechnungen";
+            this.rechnungenToolStripMenuItem.Click += new System.EventHandler(this.rechnungenToolStripMenuItem_Click);
             // 
             // toolStripSeparator9
             // 
@@ -601,6 +606,18 @@
             this.bearbeitenToolStripMenuItem1.Name = "bearbeitenToolStripMenuItem1";
             this.bearbeitenToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
             this.bearbeitenToolStripMenuItem1.Text = "&Bearbeiten";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(163, 6);
+            // 
+            // geschäftsdatenToolStripMenuItem
+            // 
+            this.geschäftsdatenToolStripMenuItem.Name = "geschäftsdatenToolStripMenuItem";
+            this.geschäftsdatenToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.geschäftsdatenToolStripMenuItem.Text = "&Geschäftsdaten";
+            this.geschäftsdatenToolStripMenuItem.Click += new System.EventHandler(this.geschäftsdatenToolStripMenuItem_Click);
             // 
             // windowsMenu
             // 
@@ -802,6 +819,8 @@
         private System.Windows.Forms.ToolStripMenuItem bearbeitenToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem personaldatenToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem geschäftsdatenToolStripMenuItem;
     }
 }
 

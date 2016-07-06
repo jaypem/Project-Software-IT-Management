@@ -121,7 +121,7 @@ namespace Fahrrad_ERP
 
         private void personaldatenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            showForm(new Mitarbeiter_sehen());
+            showForm(new Mitarbeiter_Ansicht());
         }
         private void showForm(Form ob)
         {
@@ -131,10 +131,16 @@ namespace Fahrrad_ERP
         public void UserSettings()
         {
             personaldatenToolStripMenuItem.Visible = User.admin;
+            geschäftsdatenToolStripMenuItem.Visible = User.admin;
             werkstattMenu.Visible = User.ansichtW;
             ladenMenu.Visible = User.ansichtL;
             verwaltungMenu.Visible = User.ansichtV;
-            toolStripStatusLabel.Text = "User: " + User.login;
+            Status("User: " + User.login);
+        }
+
+        public void Status(string str)
+        {
+            toolStripStatusLabel.Text = str;
         }
 
         private void main_FormClosing(object sender, FormClosingEventArgs e)
@@ -148,5 +154,16 @@ namespace Fahrrad_ERP
                 e.Cancel = true;
             }
         }
+
+        private void geschäftsdatenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showForm(new Geschäftsdaten());
+        }
+
+        private void rechnungenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showForm(new Rechnung());
+        }
+
     }
 }

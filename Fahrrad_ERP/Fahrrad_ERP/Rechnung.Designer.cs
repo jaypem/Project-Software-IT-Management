@@ -1,6 +1,6 @@
 ﻿namespace Fahrrad_ERP
 {
-    partial class Mitarbeiter_sehen
+    partial class Rechnung
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -30,27 +30,26 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonAn = new System.Windows.Forms.Button();
-            this.buttonBe = new System.Windows.Forms.Button();
+            this.buttonWahl = new System.Windows.Forms.Button();
+            this.buttonErstellen = new System.Windows.Forms.Button();
+            this.buttonDruck = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.labelVorname = new System.Windows.Forms.Label();
+            this.labelDatum = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.labelLog = new System.Windows.Forms.Label();
+            this.labelNummer = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.labelAbteil = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.labelSumme = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.Nachname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Vorname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.login = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Pos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Bezeichnung = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Menge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Preis = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Summe = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -72,38 +71,50 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(659, 382);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.TabIndex = 1;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.buttonAn);
-            this.flowLayoutPanel1.Controls.Add(this.buttonBe);
+            this.flowLayoutPanel1.Controls.Add(this.buttonWahl);
+            this.flowLayoutPanel1.Controls.Add(this.buttonErstellen);
+            this.flowLayoutPanel1.Controls.Add(this.buttonDruck);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(437, 29);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // buttonAn
+            // buttonWahl
             // 
-            this.buttonAn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.buttonAn.Location = new System.Drawing.Point(3, 3);
-            this.buttonAn.Name = "buttonAn";
-            this.buttonAn.Size = new System.Drawing.Size(134, 23);
-            this.buttonAn.TabIndex = 0;
-            this.buttonAn.Text = "Neuer Mitarbeiter";
-            this.buttonAn.UseVisualStyleBackColor = true;
-            this.buttonAn.Click += new System.EventHandler(this.buttonAn_Click);
+            this.buttonWahl.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonWahl.Location = new System.Drawing.Point(3, 3);
+            this.buttonWahl.Name = "buttonWahl";
+            this.buttonWahl.Size = new System.Drawing.Size(134, 23);
+            this.buttonWahl.TabIndex = 0;
+            this.buttonWahl.Text = "Bestellung wählen";
+            this.buttonWahl.UseVisualStyleBackColor = true;
+            this.buttonWahl.Click += new System.EventHandler(this.buttonWahl_Click);
             // 
-            // buttonBe
+            // buttonErstellen
             // 
-            this.buttonBe.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.buttonBe.Location = new System.Drawing.Point(143, 3);
-            this.buttonBe.Name = "buttonBe";
-            this.buttonBe.Size = new System.Drawing.Size(134, 23);
-            this.buttonBe.TabIndex = 1;
-            this.buttonBe.Text = "Mitarbeiter bearbeiten";
-            this.buttonBe.UseVisualStyleBackColor = true;
-            this.buttonBe.Click += new System.EventHandler(this.buttonBe_Click);
+            this.buttonErstellen.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonErstellen.Enabled = false;
+            this.buttonErstellen.Location = new System.Drawing.Point(143, 3);
+            this.buttonErstellen.Name = "buttonErstellen";
+            this.buttonErstellen.Size = new System.Drawing.Size(134, 23);
+            this.buttonErstellen.TabIndex = 1;
+            this.buttonErstellen.Text = "Rechnung erstellen";
+            this.buttonErstellen.UseVisualStyleBackColor = true;
+            // 
+            // buttonDruck
+            // 
+            this.buttonDruck.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonDruck.Enabled = false;
+            this.buttonDruck.Location = new System.Drawing.Point(283, 3);
+            this.buttonDruck.Name = "buttonDruck";
+            this.buttonDruck.Size = new System.Drawing.Size(134, 23);
+            this.buttonDruck.TabIndex = 2;
+            this.buttonDruck.Text = "Rechnung drucken";
+            this.buttonDruck.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -123,18 +134,13 @@
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.labelVorname, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.labelDatum, 0, 7);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.labelName, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.labelLog, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.labelNummer, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 9);
-            this.tableLayoutPanel2.Controls.Add(this.labelAbteil, 0, 10);
-            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 12);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox1, 0, 13);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox2, 0, 14);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox3, 0, 15);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox4, 0, 16);
+            this.tableLayoutPanel2.Controls.Add(this.labelSumme, 0, 10);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -165,18 +171,17 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
+            this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Vorname";
+            this.label3.Text = "Datum";
             // 
-            // labelVorname
+            // labelDatum
             // 
-            this.labelVorname.AutoSize = true;
-            this.labelVorname.Location = new System.Drawing.Point(3, 120);
-            this.labelVorname.Name = "labelVorname";
-            this.labelVorname.Size = new System.Drawing.Size(25, 13);
-            this.labelVorname.TabIndex = 5;
-            this.labelVorname.Text = "123";
+            this.labelDatum.AutoSize = true;
+            this.labelDatum.Location = new System.Drawing.Point(3, 120);
+            this.labelDatum.Name = "labelDatum";
+            this.labelDatum.Size = new System.Drawing.Size(0, 13);
+            this.labelDatum.TabIndex = 5;
             // 
             // label2
             // 
@@ -184,18 +189,17 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
+            this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Nachname";
+            this.label2.Text = "Name";
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
             this.labelName.Location = new System.Drawing.Point(3, 70);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(25, 13);
+            this.labelName.Size = new System.Drawing.Size(0, 13);
             this.labelName.TabIndex = 3;
-            this.labelName.Text = "123";
             // 
             // label1
             // 
@@ -203,18 +207,17 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Login";
+            this.label1.Text = "Bestellnummer";
             // 
-            // labelLog
+            // labelNummer
             // 
-            this.labelLog.AutoSize = true;
-            this.labelLog.Location = new System.Drawing.Point(3, 20);
-            this.labelLog.Name = "labelLog";
-            this.labelLog.Size = new System.Drawing.Size(25, 13);
-            this.labelLog.TabIndex = 1;
-            this.labelLog.Text = "123";
+            this.labelNummer.AutoSize = true;
+            this.labelNummer.Location = new System.Drawing.Point(3, 20);
+            this.labelNummer.Name = "labelNummer";
+            this.labelNummer.Size = new System.Drawing.Size(0, 13);
+            this.labelNummer.TabIndex = 1;
             // 
             // label4
             // 
@@ -222,80 +225,28 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 150);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.Size = new System.Drawing.Size(83, 13);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Abteilung";
+            this.label4.Text = "Bestellsumme";
             // 
-            // labelAbteil
+            // labelSumme
             // 
-            this.labelAbteil.AutoSize = true;
-            this.labelAbteil.Location = new System.Drawing.Point(3, 170);
-            this.labelAbteil.Name = "labelAbteil";
-            this.labelAbteil.Size = new System.Drawing.Size(25, 13);
-            this.labelAbteil.TabIndex = 7;
-            this.labelAbteil.Text = "123";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 200);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Ansichten";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoCheck = false;
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(3, 223);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(56, 17);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.Text = "Laden";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.Click += new System.EventHandler(this.checkBox1_Click);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoCheck = false;
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(3, 248);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(79, 17);
-            this.checkBox2.TabIndex = 10;
-            this.checkBox2.Text = "Verwaltung";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoCheck = false;
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(3, 273);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(72, 17);
-            this.checkBox3.TabIndex = 11;
-            this.checkBox3.Text = "Werkstatt";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoCheck = false;
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(3, 298);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(55, 17);
-            this.checkBox4.TabIndex = 12;
-            this.checkBox4.Text = "Admin";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.labelSumme.AutoSize = true;
+            this.labelSumme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSumme.Location = new System.Drawing.Point(3, 170);
+            this.labelSumme.Name = "labelSumme";
+            this.labelSumme.Size = new System.Drawing.Size(0, 20);
+            this.labelSumme.TabIndex = 7;
             // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Nachname,
-            this.Vorname,
-            this.login});
+            this.Pos,
+            this.ID,
+            this.Bezeichnung,
+            this.Menge,
+            this.Preis,
+            this.Summe});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.FullRowSelect = true;
             this.listView1.Location = new System.Drawing.Point(3, 38);
@@ -304,34 +255,50 @@
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // Nachname
+            // Pos
             // 
-            this.Nachname.Text = "Nachname";
-            this.Nachname.Width = 118;
+            this.Pos.Text = "Pos.";
+            this.Pos.Width = 35;
             // 
-            // Vorname
+            // ID
             // 
-            this.Vorname.Text = "Vorname";
-            this.Vorname.Width = 113;
+            this.ID.Text = "ID";
+            this.ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ID.Width = 45;
             // 
-            // login
+            // Bezeichnung
             // 
-            this.login.Text = "Benutzer";
-            this.login.Width = 87;
+            this.Bezeichnung.Text = "Bezeichnung";
+            this.Bezeichnung.Width = 165;
             // 
-            // Mitarbeiter_sehen
+            // Menge
+            // 
+            this.Menge.Text = "Menge";
+            this.Menge.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Menge.Width = 45;
+            // 
+            // Preis
+            // 
+            this.Preis.Text = "E-Preis";
+            this.Preis.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Preis.Width = 70;
+            // 
+            // Summe
+            // 
+            this.Summe.Text = "G-Preis";
+            this.Summe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Summe.Width = 70;
+            // 
+            // Rechnung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 382);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MinimumSize = new System.Drawing.Size(675, 420);
-            this.Name = "Mitarbeiter_sehen";
-            this.ShowIcon = false;
-            this.Text = "Mitarbeiter";
-            this.Load += new System.EventHandler(this.Mitarbeiter_sehen_Load);
+            this.Name = "Rechnung";
+            this.Text = "Rechnung";
+            this.Load += new System.EventHandler(this.Rechnung_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -345,26 +312,25 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button buttonAn;
-        private System.Windows.Forms.Button buttonBe;
+        private System.Windows.Forms.Button buttonWahl;
+        private System.Windows.Forms.Button buttonErstellen;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label labelVorname;
+        private System.Windows.Forms.Label labelDatum;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelLog;
+        private System.Windows.Forms.Label labelNummer;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label labelAbteil;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.Label labelSumme;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader Nachname;
-        private System.Windows.Forms.ColumnHeader Vorname;
-        private System.Windows.Forms.ColumnHeader login;
+        private System.Windows.Forms.ColumnHeader Pos;
+        private System.Windows.Forms.ColumnHeader ID;
+        private System.Windows.Forms.ColumnHeader Bezeichnung;
+        private System.Windows.Forms.Button buttonDruck;
+        private System.Windows.Forms.ColumnHeader Menge;
+        private System.Windows.Forms.ColumnHeader Preis;
+        private System.Windows.Forms.ColumnHeader Summe;
     }
 }

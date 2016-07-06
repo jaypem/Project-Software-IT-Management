@@ -1,6 +1,6 @@
 ﻿namespace Fahrrad_ERP
 {
-    partial class Mitarbeiter
+    partial class Mitarbeiter_ändern
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -36,7 +37,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -46,6 +46,8 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +66,6 @@
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.textBox4, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.checkBox1, 3, 1);
@@ -72,8 +73,11 @@
             this.tableLayoutPanel1.Controls.Add(this.checkBox3, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.checkBox4, 3, 4);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.MaximumSize = new System.Drawing.Size(454, 222);
+            this.tableLayoutPanel1.MinimumSize = new System.Drawing.Size(454, 222);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
@@ -130,38 +134,36 @@
             // 
             // textBox1
             // 
+            this.textBox1.AllowDrop = true;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.textBox1.Location = new System.Drawing.Point(103, 43);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(144, 20);
             this.textBox1.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.textBox1, "Bitte geben Sie hier den gewünschten Loginnamen ein. Der Login muss mindestens 3 " +
+                    "Zeichen enthalten.\r\nZahlen sind erlaubt, Sonderzeichen jedoch nicht.");
             // 
             // textBox2
             // 
+            this.textBox2.AllowDrop = true;
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.textBox2.Location = new System.Drawing.Point(103, 73);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(144, 20);
             this.textBox2.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.textBox2, "Geben Sie hier den Nachnamen des Mitarbeiters ein. Beachten Sie, dass Zahlen und " +
+                    "Sonderzeichen nicht gestattet sind.");
             // 
             // textBox3
             // 
+            this.textBox3.AllowDrop = true;
             this.textBox3.Dock = System.Windows.Forms.DockStyle.Left;
             this.textBox3.Location = new System.Drawing.Point(103, 103);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(144, 20);
             this.textBox3.TabIndex = 7;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(303, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ansichten:";
+            this.toolTip1.SetToolTip(this.textBox3, "Geben Sie hier den Vornamen des Mitarbeiters ein. Beachten Sie, dass Zahlen und S" +
+                    "onderzeichen nicht gestattet sind.");
             // 
             // label6
             // 
@@ -175,11 +177,15 @@
             // 
             // textBox4
             // 
+            this.textBox4.AllowDrop = true;
             this.textBox4.Dock = System.Windows.Forms.DockStyle.Left;
             this.textBox4.Location = new System.Drawing.Point(103, 133);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(144, 20);
             this.textBox4.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.textBox4, "Geben Sie hier die Position oder die Abteilung des Mitarbeites ein. Alternativ kö" +
+                    "nnen Sie hier auch einen Kommentar eintragen. \r\nBeachten Sie, dass Sonderzeichen" +
+                    " nicht erlaubt sind.");
             // 
             // checkBox1
             // 
@@ -190,6 +196,7 @@
             this.checkBox1.Size = new System.Drawing.Size(56, 24);
             this.checkBox1.TabIndex = 12;
             this.checkBox1.Text = "Laden";
+            this.toolTip1.SetToolTip(this.checkBox1, "Der Mitarbeiter kann die Ladenansicht verwenden.");
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // checkBox2
@@ -201,6 +208,7 @@
             this.checkBox2.Size = new System.Drawing.Size(79, 24);
             this.checkBox2.TabIndex = 13;
             this.checkBox2.Text = "Verwaltung";
+            this.toolTip1.SetToolTip(this.checkBox2, "Der Mitarbeiter kann die Verwaltungsansicht verwenden.");
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox3
@@ -212,6 +220,7 @@
             this.checkBox3.Size = new System.Drawing.Size(72, 24);
             this.checkBox3.TabIndex = 14;
             this.checkBox3.Text = "Werkstatt";
+            this.toolTip1.SetToolTip(this.checkBox3, "Der Mitarbeiter kann die Werkstattansicht verwenden.");
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // checkBox4
@@ -223,6 +232,7 @@
             this.checkBox4.Size = new System.Drawing.Size(55, 24);
             this.checkBox4.TabIndex = 15;
             this.checkBox4.Text = "Admin";
+            this.toolTip1.SetToolTip(this.checkBox4, "Der Mitarbeiter hat Adminberechtigungen.");
             this.checkBox4.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel2
@@ -255,22 +265,41 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button1.Location = new System.Drawing.Point(85, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 23);
             this.button1.TabIndex = 9;
             this.button1.Text = "Speichern";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Mitarbeiter
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label2, 2);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(253, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Ansichten:";
+            // 
+            // Mitarbeiter_ändern
             // 
             this.AcceptButton = this.button1;
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(454, 222);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Mitarbeiter";
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(470, 260);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(470, 260);
+            this.Name = "Mitarbeiter_ändern";
             this.Text = "Mitarbeiter anlegen";
             this.Load += new System.EventHandler(this.Mitarbeiter_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -300,5 +329,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

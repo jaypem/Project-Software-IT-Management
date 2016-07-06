@@ -21,7 +21,7 @@ namespace Fahrrad_ERP
             set_color(0);
             if (textBoxPW.Text == passwort && textBoxPWnew1.Text == textBoxPWnew2.Text)
             {
-                set_pass(textBoxPW.Text);
+                set_pass(textBoxPWnew1.Text);
             }
             else
             {
@@ -43,15 +43,31 @@ namespace Fahrrad_ERP
             }
         }
 
-        private string get_pass()
+        private string getPasswort(string login)
         {
-            string pw = "";
-            return pw;
+            List<List<string>> strList = new List<List<string>>();
+            string sqlcmd = "SELECT `passwort` FROM `personal` WHERE `login` LIKE '" + login + "'";
+            Database_Fahrrad daten = new Database_Fahrrad();
+            strList = daten.getData(sqlcmd);
+            try
+            {
+                string[] str = new string[strList[0].Count];
+                strList[0].CopyTo(str, 0);
+                if (str == null) str[0] = "";
+                return str[0];
+            }
+            catch (Exception)
+            {
+                return "";
+            }
         }
 
         private void set_pass(String pw)
         {
-            MessageBox.Show("Passwort wurde erfolgreich geändert.", "Bestätigung", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string sqlcmd = "UPDATE `personal` SET `Passwort`='" + pw + "' WHERE `login` LIKE '" + User.login + "'";
+            Database_Fahrrad daten = new Database_Fahrrad();
+            daten.setData(sqlcmd);
+            ((main)this.MdiParent).Status("Passwort erfolgreich geändert.");
             this.Close();
         }
 
@@ -76,7 +92,7 @@ namespace Fahrrad_ERP
 
         private void Passwort_Load(object sender, EventArgs e)
         {
-            passwort = get_pass();
+            passwort = getPasswort(User.login);
         }
 
         private void buttonAB_Click(object sender, EventArgs e)
