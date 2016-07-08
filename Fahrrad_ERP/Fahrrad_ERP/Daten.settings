@@ -1,0 +1,51 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Fahrrad_ERP" GeneratedClassName="Daten">
+  <Profiles />
+  <Settings>
+    <Setting Name="Geschäftsführer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Martin Thrum</Value>
+    </Setting>
+    <Setting Name="Add1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Carl-Zeiss-Straße 3</Value>
+    </Setting>
+    <Setting Name="Add2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">4. OG</Value>
+    </Setting>
+    <Setting Name="Name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Mein schöner Fahrradladen GmbH</Value>
+    </Setting>
+    <Setting Name="PLZ" Type="System.String" Scope="User">
+      <Value Profile="(Default)">07743</Value>
+    </Setting>
+    <Setting Name="Ort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Jena</Value>
+    </Setting>
+    <Setting Name="Tel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">03641 / 9-0</Value>
+    </Setting>
+    <Setting Name="Fax" Type="System.String" Scope="User">
+      <Value Profile="(Default)">03641 / 9-1</Value>
+    </Setting>
+    <Setting Name="Mail" Type="System.String" Scope="User">
+      <Value Profile="(Default)">martin.thrum@uni-jena.de</Value>
+    </Setting>
+    <Setting Name="Gericht" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Amtsgericht Jena</Value>
+    </Setting>
+    <Setting Name="Register" Type="System.String" Scope="User">
+      <Value Profile="(Default)">123456</Value>
+    </Setting>
+    <Setting Name="UmsatzID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">100100100</Value>
+    </Setting>
+    <Setting Name="IBAN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DE00 1234 4567 8910 1122 3344 55</Value>
+    </Setting>
+    <Setting Name="BIC" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DEUTSCHLAND</Value>
+    </Setting>
+    <Setting Name="Bank" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Deutsche Indialbank</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

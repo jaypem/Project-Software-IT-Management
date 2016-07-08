@@ -445,6 +445,7 @@
             this.produktkonfiguratorToolStripMenuItem.Name = "produktkonfiguratorToolStripMenuItem";
             this.produktkonfiguratorToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.produktkonfiguratorToolStripMenuItem.Text = "&Produktkonfigurator";
+            this.produktkonfiguratorToolStripMenuItem.Click += new System.EventHandler(this.produktkonfiguratorToolStripMenuItem_Click);
             // 
             // toolStripSeparator10
             // 
@@ -529,7 +530,7 @@
             this.anlegenToolStripMenuItem4,
             this.bearbeitenToolStripMenuItem4});
             this.aufträgeToolStripMenuItem1.Name = "aufträgeToolStripMenuItem1";
-            this.aufträgeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.aufträgeToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
             this.aufträgeToolStripMenuItem1.Text = "&Aufträge";
             // 
             // anlegenToolStripMenuItem4
@@ -547,7 +548,7 @@
             // rechnungenToolStripMenuItem
             // 
             this.rechnungenToolStripMenuItem.Name = "rechnungenToolStripMenuItem";
-            this.rechnungenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rechnungenToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.rechnungenToolStripMenuItem.Text = "&Rechnungen";
             this.rechnungenToolStripMenuItem.Click += new System.EventHandler(this.rechnungenToolStripMenuItem_Click);
             // 

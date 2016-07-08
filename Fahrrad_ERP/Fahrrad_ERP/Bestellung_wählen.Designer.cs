@@ -34,6 +34,7 @@
             this.Nachname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Datum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Summe = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Kundennr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -71,11 +72,13 @@
             this.Bestellnummer,
             this.Nachname,
             this.Datum,
-            this.Summe});
+            this.Summe,
+            this.Kundennr});
             this.tableLayoutPanel1.SetColumnSpan(this.listView1, 4);
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.FullRowSelect = true;
             this.listView1.Location = new System.Drawing.Point(3, 3);
+            this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
             this.tableLayoutPanel1.SetRowSpan(this.listView1, 6);
             this.listView1.Size = new System.Drawing.Size(448, 174);
@@ -105,6 +108,12 @@
             this.Summe.Text = "Summe";
             this.Summe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Summe.Width = 80;
+            // 
+            // Kundennr
+            // 
+            this.Kundennr.Text = "Kundennummer";
+            this.Kundennr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Kundennr.Width = 0;
             // 
             // tableLayoutPanel2
             // 
@@ -175,5 +184,6 @@
         private System.Windows.Forms.ColumnHeader Nachname;
         private System.Windows.Forms.ColumnHeader Datum;
         private System.Windows.Forms.ColumnHeader Summe;
+        private System.Windows.Forms.ColumnHeader Kundennr;
     }
 }

@@ -165,5 +165,10 @@ namespace Fahrrad_ERP
             showForm(new Rechnung());
         }
 
+        private void produktkonfiguratorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showForm(new Konfigurator());
+        }
+
     }
 }

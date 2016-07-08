@@ -11,9 +11,10 @@ namespace Fahrrad_ERP
 {
     public class Database_Fahrrad
     {
-        string con_string = "SERVER=localhost; " +
-                            "DATABASE=fahrrad; " +
-                            "UID=root ";
+        string con_string = "SERVER=5.230.134.175; " +
+                            "DATABASE=fahrrad_niko; " +
+                            "UID=sit_niko; " +
+                            "Password = E4ySZA3jCejSnA23";
 
         public void setData(string command)
         {

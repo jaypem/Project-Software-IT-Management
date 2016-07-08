@@ -37,3 +37,4 @@ C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Mitarbeiter_Ansicht.resources
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Rechnung.resources
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Bestellung_wählen.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Konfigurator.resources

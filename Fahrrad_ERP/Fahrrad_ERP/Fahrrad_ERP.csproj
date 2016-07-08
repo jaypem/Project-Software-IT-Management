@@ -82,6 +82,8 @@
       <DependentUpon>Bestellung_wählen.cs</DependentUpon>
     </Compile>
     <Compile Include="Database_Fahrrad.cs" />
+    <Compile Include="Daten.cs" />
+    <Compile Include="Druck.cs" />
     <Compile Include="eigeneDaten.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +95,17 @@
     </Compile>
     <Compile Include="Geschäftsdaten.Designer.cs">
       <DependentUpon>Geschäftsdaten.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Daten.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Daten.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Konfigurator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Konfigurator.Designer.cs">
+      <DependentUpon>Konfigurator.cs</DependentUpon>
     </Compile>
     <Compile Include="ListViewColumnSorter.cs" />
     <Compile Include="Mitarbeiter_ändern.cs">
@@ -140,6 +153,9 @@
     <EmbeddedResource Include="Geschäftsdaten.resx">
       <DependentUpon>Geschäftsdaten.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Konfigurator.resx">
+      <DependentUpon>Konfigurator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mitarbeiter_ändern.resx">
       <DependentUpon>Mitarbeiter_ändern.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +181,10 @@
       <DependentUpon>Rechnung.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="Daten.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Daten.Designer.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
