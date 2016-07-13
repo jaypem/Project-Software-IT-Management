@@ -17,7 +17,7 @@ namespace Fahrrad_ERP
             listView1.ListViewItemSorter = sorter;
         }
         private List<List<string>> dataList = new List<List<string>>();
-        private ListViewColumnSorter sorter = new ListViewColumnSorter();
+        private ListViewSortieren sorter = new ListViewSortieren();
 
         private void Mitarbeiter_sehen_Load(object sender, EventArgs e)
         {

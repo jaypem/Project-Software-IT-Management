@@ -1,6 +1,6 @@
 ﻿namespace Fahrrad_ERP
 {
-    partial class Bestellung_wählen
+    partial class Auswahl
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -30,11 +30,6 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.Bestellnummer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Nachname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Datum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Summe = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Kundennr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -68,12 +63,6 @@
             // 
             // listView1
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Bestellnummer,
-            this.Nachname,
-            this.Datum,
-            this.Summe,
-            this.Kundennr});
             this.tableLayoutPanel1.SetColumnSpan(this.listView1, 4);
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.FullRowSelect = true;
@@ -87,33 +76,6 @@
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listView1_ColumnClick);
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // Bestellnummer
-            // 
-            this.Bestellnummer.Text = "Bestellnr.";
-            this.Bestellnummer.Width = 90;
-            // 
-            // Nachname
-            // 
-            this.Nachname.Text = "Name";
-            this.Nachname.Width = 160;
-            // 
-            // Datum
-            // 
-            this.Datum.Text = "Datum";
-            this.Datum.Width = 70;
-            // 
-            // Summe
-            // 
-            this.Summe.Text = "Summe";
-            this.Summe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Summe.Width = 80;
-            // 
-            // Kundennr
-            // 
-            this.Kundennr.Text = "Kundennummer";
-            this.Kundennr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Kundennr.Width = 0;
             // 
             // tableLayoutPanel2
             // 
@@ -151,8 +113,9 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "Auswählen";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Bestellung_wählen
+            // Auswahl
             // 
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,7 +127,7 @@
             this.MaximumSize = new System.Drawing.Size(470, 260);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(470, 260);
-            this.Name = "Bestellung_wählen";
+            this.Name = "Auswahl";
             this.Text = "Bestellung auswählen";
             this.Load += new System.EventHandler(this.Bestellung_wählen_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -180,10 +143,5 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader Bestellnummer;
-        private System.Windows.Forms.ColumnHeader Nachname;
-        private System.Windows.Forms.ColumnHeader Datum;
-        private System.Windows.Forms.ColumnHeader Summe;
-        private System.Windows.Forms.ColumnHeader Kundennr;
     }
 }

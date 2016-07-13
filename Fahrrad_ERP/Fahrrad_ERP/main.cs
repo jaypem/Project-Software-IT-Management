@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -20,46 +21,27 @@ namespace Fahrrad_ERP
 
         private void OpenFile(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            openFileDialog.Filter = "Textdateien (*.txt)|*.txt|Alle Dateien (*.*)|*.*";
-            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = openFileDialog.FileName;
-            }
+            öffnen(sender, e);
         }
 
         private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            saveFileDialog.Filter = "Textdateien (*.txt)|*.txt|Alle Dateien (*.*)|*.*";
-            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = saveFileDialog.FileName;
-            }
+            sichern(sender, e);
         }
 
         private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form childForm in MdiChildren)
+            {
+                childForm.Close();
+            }
             this.Close();
         }
 
-        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
 
         private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
         }
 
         private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -114,11 +96,6 @@ namespace Fahrrad_ERP
                 a.ShowDialog();
             } 
         }
-        private void visibleIcons(String[] user)
-        {
-
-        }
-
         private void personaldatenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showForm(new Mitarbeiter_Ansicht());
@@ -135,7 +112,7 @@ namespace Fahrrad_ERP
             werkstattMenu.Visible = User.ansichtW;
             ladenMenu.Visible = User.ansichtL;
             verwaltungMenu.Visible = User.ansichtV;
-            Status("User: " + User.login);
+            Status("angemeldeter User: " + User.login);
         }
 
         public void Status(string str)
@@ -170,5 +147,110 @@ namespace Fahrrad_ERP
             showForm(new Konfigurator());
         }
 
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Drucken();
+        }
+
+        private void printSetupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Druckoptionen d = new Druckoptionen();
+            if (d.ShowDialog() == DialogResult.OK)
+            {
+                Status("Druckeinstellungen wurden geändert.");
+            }
+            else
+            {
+                Status("Druckeinstellungen wurden nicht geändert.");
+            }
+        }
+
+        private void printPreviewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Druckvorschau();
+        }
+
+        private void printToolStripButton_Click(object sender, EventArgs e)
+        {
+            Drucken();
+        }
+        private void Drucken()
+        {
+            if (ActiveMdiChild != null)
+            {
+                switch (ActiveMdiChild.Text)
+                {
+                    case "Rechnung":
+                        ((Rechnung)ActiveMdiChild).print();
+                        break;
+                    default:
+
+                        break;
+                }
+            }
+        }
+        private void Druckvorschau()
+        {
+            if (ActiveMdiChild != null)
+            {
+                switch (ActiveMdiChild.Text)
+                {
+                    case "Rechnung":
+                        ((Rechnung)ActiveMdiChild).printPre();
+                        break;
+                    default:
+
+                        break;
+                }
+            }
+        }
+        private void öffnen(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                switch (ActiveMdiChild.Text)
+                {
+                    case "Rechnung":
+                        ((Rechnung)ActiveMdiChild).buttonWahl_Click(sender, e);
+                        break;
+                    case "Konfigurator":
+                        ((Konfigurator)ActiveMdiChild).openConfig();
+                        break;
+                    default:
+
+                        break;
+                }
+            }
+        }
+
+        private void sichern(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                switch (ActiveMdiChild.Text)
+                {
+                    case "Konfigurator":
+                        ((Konfigurator)ActiveMdiChild).saveConfig();
+                        break;
+                    default:
+
+                        break;
+                }
+            }
+        }
+        private void printPreviewToolStripButton_Click(object sender, EventArgs e)
+        {
+            Druckvorschau();
+        }
+
+        private void saveToolStripButton_Click(object sender, EventArgs e)
+        {
+            sichern(sender, e);
+        }
+
+        private void openToolStripButton_Click(object sender, EventArgs e)
+        {
+            öffnen(sender, e);
+        }
     }
 }

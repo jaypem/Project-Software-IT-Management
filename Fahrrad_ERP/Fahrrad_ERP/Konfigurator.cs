@@ -15,10 +15,12 @@ namespace Fahrrad_ERP
         {
             InitializeComponent();
         }
+        string konfignr;
         private List<List<string>> dataListGroup = new List<List<string>>(); //für Produktgruppen
         private List<List<string>> dataListProd = new List<List<string>>(); //für Produkte
         private List<List<string>> dataListBlackA = new List<List<string>>(); //für InkompatibleProdukte von A
         private List<List<string>> dataListBlackB = new List<List<string>>(); //für InkompatibleProdukte von B
+        private List<List<string>> dataListKonf = new List<List<string>>(); //für Konfigurationspos
 
         private void Konfigurator_Load(object sender, EventArgs e)
         {
@@ -56,10 +58,26 @@ namespace Fahrrad_ERP
         }
         private void clearTree()
         {
-            for (int i = 0; i < treeViewProd.Nodes.Count; i++)
+            foreach (List<string> l in dataListGroup)
             {
-                treeViewProd.Nodes[i].Remove();
+                treeViewProd.Nodes[l[0].ToString()].Remove();
             }
+        }
+        private void fill()
+        {
+            //Konfigurationspos auslesen
+            string sqlcmd = "SELECT Position, konfigurationenpos.ProduktID, produkte.Bezeichnung, Menge, produkte.Preis FROM konfigurationenpos INNER JOIN produkte ON produkte.ProduktID = konfigurationenpos.ProduktID WHERE KonfigurationID = '" + konfignr + "'";
+            Database_Fahrrad daten = new Database_Fahrrad();
+            dataListKonf = daten.getData(sqlcmd);
+            refreshTree();
+            listViewKonfig.Items.Clear();
+            foreach (List<string> list in dataListKonf)
+            {
+                listViewKonfig.Items.Add(new ListViewItem(new string[] { list[0].ToString(), list[1].ToString(), list[2].ToString(), list[3].ToString(), (Convert.ToDecimal(list[4])).ToString("0.00"), (Convert.ToInt16(list[3])*Convert.ToDecimal(list[4])).ToString("0.00") }));
+                blackList(list[1].ToString(), true); //blackliste beachten
+            }
+            labelSum.Text = "Summe: " + sum().ToString("0.00 €");
+            labelKon.Text = "Konfiguration "+konfignr;
         }
 
         private void treeViewProd_AfterSelect(object sender, TreeViewEventArgs e)
@@ -275,6 +293,68 @@ namespace Fahrrad_ERP
         private void treeViewProd_BeforeSelect(object sender, TreeViewCancelEventArgs e)
         {
             if (e.Node.ForeColor == Color.Gray) e.Cancel = true; //Graue tree Items können nicht verwendet werden
+        }
+
+        public void saveConfig()
+        {
+            string sqlcmd;
+            Database_Fahrrad daten = new Database_Fahrrad();
+            if (labelKon.Text == "")
+            {
+                Konfiguration_speichern ks = new Konfiguration_speichern();
+                if (ks.ShowDialog() == DialogResult.OK)
+                {
+                    if (ks.Konf) //ist Konfiguration
+                    {
+                        sqlcmd = "INSERT INTO konfigurationenpos (KonfigurationID, Position, Menge, ProduktID) VALUES ";
+                        for (int j = 0; j < listViewKonfig.Items.Count; j++)
+                        {
+                            string pos = listViewKonfig.Items[j].SubItems[0].Text;
+                            string prod = listViewKonfig.Items[j].SubItems[1].Text;
+                            string menge = listViewKonfig.Items[j].SubItems[3].Text;
+                            if (j != listViewKonfig.Items.Count - 1) sqlcmd += "('" + ks.KonfID + "', '" + pos + "' , '" + menge + "','" + prod + "'), ";
+                            else sqlcmd += "('" + ks.KonfID + "', '" + pos + "' , '" + menge + "','" + prod + "')";
+                        }
+                        daten.setData(sqlcmd);
+                    }
+                    else //ist Bestellung
+                    {
+
+                    }
+                }
+            }
+            else
+            {
+                string ID = labelKon.Text;
+                ID = ID.Replace("Konfiguration ", " ");
+                sqlcmd = "DELETE FROM konfigurationenpos WHERE KonfigurationID = '" + ID + "'";
+                daten.setData(sqlcmd);
+                sqlcmd = "INSERT INTO konfigurationenpos (KonfigurationID, Position, Menge, ProduktID) VALUES ";
+                for (int j = 0; j < listViewKonfig.Items.Count; j++)
+                {
+                    string pos = listViewKonfig.Items[j].SubItems[0].Text;
+                    string prod = listViewKonfig.Items[j].SubItems[1].Text;
+                    string menge = listViewKonfig.Items[j].SubItems[3].Text;
+                    if (j != listViewKonfig.Items.Count - 1) sqlcmd += "('" + ID + "', '" + pos + "' , '" + menge + "','" + prod + "'), ";
+                    else sqlcmd += "('" + ID + "', '" + pos + "' , '" + menge + "','" + prod + "')";
+                }
+                daten.setData(sqlcmd);
+            }
+        }
+
+        public void openConfig()
+        {
+            Auswahl a = new Auswahl("Konfiguration");
+            if (a.ShowDialog(this) == DialogResult.OK)
+            {
+                 konfignr = a.get_ID();
+                ((main)this.MdiParent).Status("Es wurde die Konfiguration " + konfignr + " ausgewählt.");
+                fill();
+            }
+            else
+            {
+                ((main)this.MdiParent).Status("Auswahl abgebrochen!");
+            }
         }
     }
 }

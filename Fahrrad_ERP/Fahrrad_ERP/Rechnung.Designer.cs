@@ -32,8 +32,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonWahl = new System.Windows.Forms.Button();
-            this.buttonErstellen = new System.Windows.Forms.Button();
-            this.buttonDruck = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -80,8 +78,6 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.buttonWahl);
-            this.flowLayoutPanel1.Controls.Add(this.buttonErstellen);
-            this.flowLayoutPanel1.Controls.Add(this.buttonDruck);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(437, 29);
@@ -97,28 +93,6 @@
             this.buttonWahl.Text = "Bestellung wählen";
             this.buttonWahl.UseVisualStyleBackColor = true;
             this.buttonWahl.Click += new System.EventHandler(this.buttonWahl_Click);
-            // 
-            // buttonErstellen
-            // 
-            this.buttonErstellen.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.buttonErstellen.Enabled = false;
-            this.buttonErstellen.Location = new System.Drawing.Point(143, 3);
-            this.buttonErstellen.Name = "buttonErstellen";
-            this.buttonErstellen.Size = new System.Drawing.Size(134, 23);
-            this.buttonErstellen.TabIndex = 1;
-            this.buttonErstellen.Text = "Rechnung erstellen";
-            this.buttonErstellen.UseVisualStyleBackColor = true;
-            // 
-            // buttonDruck
-            // 
-            this.buttonDruck.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.buttonDruck.Location = new System.Drawing.Point(283, 3);
-            this.buttonDruck.Name = "buttonDruck";
-            this.buttonDruck.Size = new System.Drawing.Size(134, 23);
-            this.buttonDruck.TabIndex = 2;
-            this.buttonDruck.Text = "Rechnung drucken";
-            this.buttonDruck.UseVisualStyleBackColor = true;
-            this.buttonDruck.Click += new System.EventHandler(this.buttonDruck_Click);
             // 
             // groupBox1
             // 
@@ -325,6 +299,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Rechnung";
             this.Text = "Rechnung";
+            this.Load += new System.EventHandler(this.Rechnung_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -339,7 +314,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button buttonWahl;
-        private System.Windows.Forms.Button buttonErstellen;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label3;
@@ -354,12 +328,11 @@
         private System.Windows.Forms.ColumnHeader Pos;
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader Bezeichnung;
-        private System.Windows.Forms.Button buttonDruck;
         private System.Windows.Forms.ColumnHeader Menge;
         private System.Windows.Forms.ColumnHeader Preis;
         private System.Windows.Forms.ColumnHeader Summe;
-        private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

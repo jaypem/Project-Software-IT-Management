@@ -5,7 +5,7 @@ namespace Fahrrad_ERP
 {
     //Übernommen aus https://support.microsoft.com/de-de/kb/319401
     //06.07.2016 15:34 N.Fedchenheuer
-    public class ListViewColumnSorter : IComparer
+    public class ListViewSortieren : IComparer
     {
         /// <summary>
         /// Specifies the column to be sorted
@@ -23,7 +23,7 @@ namespace Fahrrad_ERP
         /// <summary>
         /// Class constructor.  Initializes various elements
         /// </summary>
-        public ListViewColumnSorter()
+        public ListViewSortieren()
         {
             // Initialize the column to '0'
             ColumnToSort = 0;

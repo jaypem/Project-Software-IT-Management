@@ -36,5 +36,7 @@ C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Mitarbeiter_ändern.resources
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Mitarbeiter_Ansicht.resources
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Rechnung.resources
-C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Bestellung_wählen.resources
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Konfigurator.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Druckoptionen.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Auswahl.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Konfiguration_speichern.resources

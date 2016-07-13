@@ -21,15 +21,13 @@ namespace Fahrrad_ERP
         private string kunde;
         private List<List<string>> dataList = new List<List<string>>(); //für Bestellung
         private List<List<string>> dataList2 = new List<List<string>>(); //für Kunde
-        private ListViewColumnSorter sorter = new ListViewColumnSorter();
+        private ListViewSortieren sorter = new ListViewSortieren();
         private void fill()
         {
             labelNummer.Text = bestellung[0];
             labelName.Text = bestellung[1];
             labelDatum.Text = bestellung[2];
             labelSumme.Text = bestellung[3];
-            buttonDruck.Enabled = true;
-            buttonErstellen.Enabled = true;
             //Bestellungpositionen auslesen
             string sqlcmd = "SELECT Position, produkte.ProduktID, produkte.Bezeichnung, Menge, bestellungpos.Preis, Summe FROM bestellungpos INNER JOIN produkte ON produkte.ProduktID = bestellungpos.ProduktID WHERE BestellungID = '" + bestellung [0]+"'";
             Database_Fahrrad daten = new Database_Fahrrad();
@@ -73,13 +71,13 @@ namespace Fahrrad_ERP
                 kundendaten[3] = l[5].ToString() + " " + l[6].ToString();
             }
         }
-        private void buttonWahl_Click(object sender, EventArgs e)
+        public void buttonWahl_Click(object sender, EventArgs e)
         {
-            Bestellung_wählen b = new Bestellung_wählen();
-            if (b.ShowDialog(this) == DialogResult.OK)
+            Auswahl a = new Auswahl("Bestellung");
+            if (a.ShowDialog(this) == DialogResult.OK)
             {
-                bestellung = b.get_bestell();
-                kunde = b.get_kunde();
+                bestellung = a.get_ZeilenInfo();
+                kunde = a.get_ID();
                 ((main)this.MdiParent).Status("Es wurde die Bestellung " + bestellung[0] + " ausgewählt.");
                 fill();
             }
@@ -88,15 +86,53 @@ namespace Fahrrad_ERP
                 ((main)this.MdiParent).Status("Auswahl abgebrochen!");
             }
         }
-        private void buttonDruck_Click(object sender, EventArgs e)
-        {
-            print();
-        }
         public void print()
         {
-            printDocument1.DocumentName = "Rechnung" + bestellung[0];
-            DialogResult r = printPreviewDialog1.ShowDialog();
-            if (r == DialogResult.OK) MessageBox.Show("DRUCK");
+            if (labelNummer.Text != "")
+            {
+                Druck dr = new Druck();
+                printDocument1.DocumentName = "Rechnung" + bestellung[0];
+                PrintDialog p = printDialog1;
+                p.PrinterSettings = dr.Einstellungen();
+                if (p.ShowDialog() == DialogResult.OK)
+                {
+                    printDocument1.PrinterSettings = p.PrinterSettings;
+                    printDocument1.Print();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bitte wählen Sie zunächst eine Bestellung aus!", "Keine Bestellung gewählt", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Auswahl a = new Auswahl("Bestellung");
+            if (a.ShowDialog(this) == DialogResult.OK)
+            {
+                bestellung = a.get_ZeilenInfo();
+                kunde = a.get_ID();
+                ((main)this.MdiParent).Status("Es wurde die Bestellung " + bestellung[0] + " ausgewählt.");
+                fill();
+            }
+            }
+        }
+        public void printPre()
+        {
+            if (labelNummer.Text != "")
+            {
+                printDocument1.DocumentName = "Rechnung" + bestellung[0];
+                printPreviewDialog1.Name = "Rechnung" + bestellung[0];
+                printPreviewDialog1.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bitte wählen Sie zunächst eine Bestellung aus!", "Keine Bestellung gewählt", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Auswahl b = new Auswahl("Bestellung");
+                if (b.ShowDialog(this) == DialogResult.OK)
+                {
+                    bestellung = b.get_ZeilenInfo();
+                    kunde = b.get_ID();
+                    ((main)this.MdiParent).Status("Es wurde die Bestellung " + bestellung[0] + " ausgewählt.");
+                    fill();
+                }
+            }
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -108,5 +144,9 @@ namespace Fahrrad_ERP
             dr.Postenauflistung(e.Graphics, kunde, bestellung[0], bestellung[3],"Rechnung", bestellung[2], dataList);
         }
 
+        private void Rechnung_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

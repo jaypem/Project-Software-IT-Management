@@ -75,15 +75,27 @@
     <Compile Include="Anmeldung.Designer.cs">
       <DependentUpon>Anmeldung.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bestellung_wählen.cs">
+    <Compile Include="Auswahl.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Bestellung_wählen.Designer.cs">
-      <DependentUpon>Bestellung_wählen.cs</DependentUpon>
+    <Compile Include="Auswahl.Designer.cs">
+      <DependentUpon>Auswahl.cs</DependentUpon>
     </Compile>
     <Compile Include="Database_Fahrrad.cs" />
     <Compile Include="Daten.cs" />
     <Compile Include="Druck.cs" />
+    <Compile Include="Druckeinstellungen.cs" />
+    <Compile Include="Druckeinstellungen.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Druckeinstellungen.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Druckoptionen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Druckoptionen.Designer.cs">
+      <DependentUpon>Druckoptionen.cs</DependentUpon>
+    </Compile>
     <Compile Include="eigeneDaten.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,13 +113,19 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Daten.settings</DependentUpon>
     </Compile>
+    <Compile Include="Konfiguration_speichern.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Konfiguration_speichern.Designer.cs">
+      <DependentUpon>Konfiguration_speichern.cs</DependentUpon>
+    </Compile>
     <Compile Include="Konfigurator.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Konfigurator.Designer.cs">
       <DependentUpon>Konfigurator.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListViewColumnSorter.cs" />
+    <Compile Include="ListViewSortieren.cs" />
     <Compile Include="Mitarbeiter_ändern.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,14 +162,20 @@
     <EmbeddedResource Include="Anmeldung.resx">
       <DependentUpon>Anmeldung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Bestellung_wählen.resx">
-      <DependentUpon>Bestellung_wählen.cs</DependentUpon>
+    <EmbeddedResource Include="Auswahl.resx">
+      <DependentUpon>Auswahl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Druckoptionen.resx">
+      <DependentUpon>Druckoptionen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="eigeneDaten.resx">
       <DependentUpon>eigeneDaten.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Geschäftsdaten.resx">
       <DependentUpon>Geschäftsdaten.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Konfiguration_speichern.resx">
+      <DependentUpon>Konfiguration_speichern.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Konfigurator.resx">
       <DependentUpon>Konfigurator.cs</DependentUpon>
@@ -184,6 +208,10 @@
     <None Include="Daten.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Daten.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Druckeinstellungen.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Druckeinstellungen.Designer.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

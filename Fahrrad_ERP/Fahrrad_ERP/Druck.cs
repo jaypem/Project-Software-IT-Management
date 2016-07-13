@@ -151,8 +151,18 @@ namespace Fahrrad_ERP
             {
                 line += 2 * ab11;
                 g.DrawString("Den Gesamtbetrag i.H.v. " + gesamt + " überweisen Sie bitte binnen 10 Tagen unter Angabe\n" +
-                "des Verwendungszwecks: "+ datum.Replace(".","") +"-"+ bestellnr +" auf untenstehenden Konto.\n\nVielen Dank für Ihren Einkauf!", f11r, b, randl, line);
+                "des Verwendungszwecks: "+ datum.Replace(".","") +"-"+ bestellnr +" auf untenstehendes Konto.\n\nVielen Dank für Ihren Einkauf!", f11r, b, randl, line);
             }
+        }
+
+        public PrinterSettings Einstellungen()
+        {
+            PrinterSettings set = new PrinterSettings();
+            Druckeinstellungen Drucker = new Druckeinstellungen();
+            set.PrinterName = Drucker.Name;
+            set.Copies = Drucker.Exemplare;
+            set.DefaultPageSettings.Color = Drucker.Farbe;
+            return set;
         }
     }
 }
