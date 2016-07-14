@@ -147,6 +147,13 @@ namespace Fahrrad_ERP
             showForm(new Konfigurator());
         }
 
+<<<<<<< HEAD
+        private void wareneingangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showForm(new Wareneingang());
+        }
+
+=======
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Drucken();
@@ -252,5 +259,6 @@ namespace Fahrrad_ERP
         {
             öffnen(sender, e);
         }
+>>>>>>> 4066934c40cf4df5de4a1a54f5e8d6ae45d196f9
     }
 }

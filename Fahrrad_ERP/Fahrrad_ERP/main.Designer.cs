@@ -246,7 +246,7 @@
             this.toolBarToolStripMenuItem.CheckOnClick = true;
             this.toolBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolBarToolStripMenuItem.Name = "toolBarToolStripMenuItem";
-            this.toolBarToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.toolBarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.toolBarToolStripMenuItem.Text = "&Symbolleiste";
             this.toolBarToolStripMenuItem.Click += new System.EventHandler(this.ToolBarToolStripMenuItem_Click);
             // 
@@ -256,7 +256,7 @@
             this.statusBarToolStripMenuItem.CheckOnClick = true;
             this.statusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.statusBarToolStripMenuItem.Name = "statusBarToolStripMenuItem";
-            this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.statusBarToolStripMenuItem.Text = "Status&leiste";
             this.statusBarToolStripMenuItem.Click += new System.EventHandler(this.StatusBarToolStripMenuItem_Click);
             // 
@@ -392,6 +392,7 @@
             this.wareneingangToolStripMenuItem.Name = "wareneingangToolStripMenuItem";
             this.wareneingangToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.wareneingangToolStripMenuItem.Text = "Waren&eingang";
+            this.wareneingangToolStripMenuItem.Click += new System.EventHandler(this.wareneingangToolStripMenuItem_Click);
             // 
             // warenausgangToolStripMenuItem
             // 
@@ -414,7 +415,7 @@
             this.anlegenToolStripMenuItem4,
             this.bearbeitenToolStripMenuItem4});
             this.aufträgeToolStripMenuItem1.Name = "aufträgeToolStripMenuItem1";
-            this.aufträgeToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+            this.aufträgeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.aufträgeToolStripMenuItem1.Text = "&Aufträge";
             // 
             // anlegenToolStripMenuItem4
@@ -432,7 +433,7 @@
             // rechnungenToolStripMenuItem
             // 
             this.rechnungenToolStripMenuItem.Name = "rechnungenToolStripMenuItem";
-            this.rechnungenToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.rechnungenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.rechnungenToolStripMenuItem.Text = "&Rechnungen";
             this.rechnungenToolStripMenuItem.Click += new System.EventHandler(this.rechnungenToolStripMenuItem_Click);
             // 
@@ -483,13 +484,13 @@
             // anlegenToolStripMenuItem1
             // 
             this.anlegenToolStripMenuItem1.Name = "anlegenToolStripMenuItem1";
-            this.anlegenToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.anlegenToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.anlegenToolStripMenuItem1.Text = "&Anlegen";
             // 
             // bearbeitenToolStripMenuItem1
             // 
             this.bearbeitenToolStripMenuItem1.Name = "bearbeitenToolStripMenuItem1";
-            this.bearbeitenToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.bearbeitenToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.bearbeitenToolStripMenuItem1.Text = "&Bearbeiten";
             // 
             // toolStripSeparator1

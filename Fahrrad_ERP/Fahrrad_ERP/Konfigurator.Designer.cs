@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+<<<<<<< HEAD
+=======
             this.labelKon = new System.Windows.Forms.Label();
+>>>>>>> 4066934c40cf4df5de4a1a54f5e8d6ae45d196f9
             this.listViewKonfig = new System.Windows.Forms.ListView();
             this.Pos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -77,6 +80,8 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(884, 434);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
+<<<<<<< HEAD
+=======
             // labelKon
             // 
             this.labelKon.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -87,6 +92,7 @@
             this.labelKon.Size = new System.Drawing.Size(0, 20);
             this.labelKon.TabIndex = 8;
             // 
+>>>>>>> 4066934c40cf4df5de4a1a54f5e8d6ae45d196f9
             // listViewKonfig
             // 
             this.listViewKonfig.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
