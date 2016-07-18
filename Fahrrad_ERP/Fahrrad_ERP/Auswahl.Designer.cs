@@ -128,6 +128,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(470, 260);
             this.Name = "Auswahl";
+            this.ShowIcon = false;
             this.Text = "Bestellung auswählen";
             this.Load += new System.EventHandler(this.Bestellung_wählen_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

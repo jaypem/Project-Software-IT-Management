@@ -158,11 +158,30 @@
     <Compile Include="Rechnung.Designer.cs">
       <DependentUpon>Rechnung.cs</DependentUpon>
     </Compile>
+    <Compile Include="taskM\changeStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="taskM\changeStatus.Designer.cs">
+      <DependentUpon>changeStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="taskM\Management.cs" />
+    <Compile Include="taskM\newTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="taskM\newTask.Designer.cs">
+      <DependentUpon>newTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="taskM\taskManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="taskM\taskManagement.Designer.cs">
+      <DependentUpon>taskManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <Compile Include="Wareneingang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Wareneingang.Designer.cs">
+    <Compile Include="Wareneingang.designer.cs">
       <DependentUpon>Wareneingang.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Anmeldung.resx">
@@ -209,6 +228,15 @@
     </Compile>
     <EmbeddedResource Include="Rechnung.resx">
       <DependentUpon>Rechnung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="taskM\changeStatus.resx">
+      <DependentUpon>changeStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="taskM\newTask.resx">
+      <DependentUpon>newTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="taskM\taskManagement.resx">
+      <DependentUpon>taskManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wareneingang.resx">
       <DependentUpon>Wareneingang.cs</DependentUpon>

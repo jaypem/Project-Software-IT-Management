@@ -289,6 +289,7 @@
             // 
             // printDialog1
             // 
+            this.printDialog1.Document = this.printDocument1;
             this.printDialog1.UseEXDialog = true;
             // 
             // Rechnung
@@ -299,7 +300,6 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Rechnung";
             this.Text = "Rechnung";
-            this.Load += new System.EventHandler(this.Rechnung_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

@@ -99,15 +99,24 @@ namespace Fahrrad_ERP
             int s7 = 185;
             //Adressblock
             g.DrawString(betreff, f15b, b, randl, randt);
-            g.DrawString("Kundennummer", f8i, b, randl, randt + ab11 * 2);
-            g.DrawString(kundennr, f8b, b, randl, randt + ab11 * 2 + ab8);
+            //Unterscheidung verschiedner Druckaufträge (Rechnung, Konfiguration etc.)
             if (betreff == "Rechnung")
             {
+                g.DrawString("Kundennummer", f8i, b, randl, randt + ab11 * 2);
                 g.DrawString("Auftragsnummer", f8i, b, randl + 40, randt + ab11 * 2);
                 g.DrawString("Auftragsdatum", f8i, b, randl + 80, randt + ab11 * 2);
+                g.DrawString(kundennr, f8b, b, randl, randt + ab11 * 2 + ab8);
                 g.DrawString(bestellnr, f8b, b, randl + 40, randt + ab11 * 2 + ab8);
                 g.DrawString(datum, f8b, b, randl + 80, randt + ab11 * 2 + ab8);
             }
+            if (betreff == "Konfiguration")
+            {
+                g.DrawString("Konfigurationsnummer", f8i, b, randl, randt + ab11 * 2);
+                g.DrawString("Datum", f8i, b, randl + 40, randt + ab11 * 2);
+                g.DrawString(bestellnr, f8b, b, randl, randt + ab11 * 2 + ab8);
+                g.DrawString(datum, f8b, b, randl + 40, randt + ab11 * 2 + ab8);
+            }
+            //Tabellenkopf
             g.DrawString("Pos", f11b, b, s1, randt + ab11 * 5);
             g.DrawString("ID", f11b, b, s2, randt + ab11 * 5);
             g.DrawString("Bezeichnung", f11b, b, s3, randt + ab11 * 5);
@@ -118,6 +127,7 @@ namespace Fahrrad_ERP
             g.DrawLine(p, s1 - 1, up, s7, up);
             float line = randt + ab11 * 5 + ab13;
             g.DrawLine(p, s1 - 1, line + 0.1F, s7, line + 0.1F);
+            //Tabelleninhalt
             foreach (List<string> l in list) {
                 g.DrawString(l[0], f11r, b, s1, line);
                 g.DrawString(l[1], f11r, b, s2, line);
@@ -128,10 +138,12 @@ namespace Fahrrad_ERP
                 line += ab13;
                 g.DrawLine(p, s1 - 1, line + 0.1F, s7, line + 0.1F);
             }
+            //Linien
             g.DrawLine(p, s1 - 1, up, s1 - 1, line + 0.1F);
             g.DrawLine(p, s2 - 1, up, s2 - 1, line + 0.1F);
             g.DrawLine(p, s3 - 1, up, s3 - 1, line + 0.1F);
             g.DrawLine(p, s5 - 1, up, s5 - 1, line + 0.1F);
+            //Netto-Steuer-Brutto Info
             g.DrawString("Netto", f11b, b, s4, line);
             g.DrawString((Convert.ToDouble(gesamt.TrimEnd(' ', '€')) / 1.19).ToString("0.00 €"), f11r, b, s7 - 1, line, rechts);
             line += ab13;
@@ -143,10 +155,12 @@ namespace Fahrrad_ERP
             g.DrawString("Gesamt", f11b, b, s4, line);
             g.DrawString((Convert.ToDecimal(gesamt.TrimEnd(' ', '€'))).ToString("0.00 €"), f11b, b, s7 - 1, line, rechts);
             line += ab13;
+            //Linien
             g.DrawLine(p, s4 - 1, line + 0.1F, s7, line + 0.1F);
             g.DrawLine(p, s4 - 1, up, s4 - 1, line + 0.1F);
             g.DrawLine(p, s6 - 1, up, s6 - 1, line + 0.1F);
             g.DrawLine(p, s7, up, s7, line + 0.1F);
+            //Zahlungsinfo
             if (betreff == "Rechnung")
             {
                 line += 2 * ab11;

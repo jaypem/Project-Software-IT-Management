@@ -37,12 +37,10 @@ C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Mitarbeiter_Ansicht.resources
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Rechnung.resources
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Konfigurator.resources
-<<<<<<< HEAD
-C:\Users\x\Documents\IT-Projects\Software und IT Management\Fahrrad_ERP\Fahrrad_ERP\bin\Debug\Fahrrad_ERP.exe.config
-C:\Users\x\Documents\IT-Projects\Software und IT Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.exe
-C:\Users\x\Documents\IT-Projects\Software und IT Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.pdb
-=======
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Druckoptionen.resources
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Auswahl.resources
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Konfiguration_speichern.resources
->>>>>>> 4066934c40cf4df5de4a1a54f5e8d6ae45d196f9
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.taskManagement.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.taskM.newTask.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.taskM.changeStatus.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Wareneingang.resources

@@ -16,6 +16,7 @@ namespace Fahrrad_ERP
                             "UID=sit_niko; " +
                             "Password = E4ySZA3jCejSnA23";
 
+
         public void setData(string command)
         {
             MySqlConnection mycon = new MySqlConnection(con_string);

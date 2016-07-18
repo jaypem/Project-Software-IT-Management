@@ -48,6 +48,10 @@ namespace Fahrrad_ERP
                         ID = listView1.SelectedItems[0].SubItems[0].Text;
                         ZeilenInfo[0] = listView1.SelectedItems[0].SubItems[2].Text + " " + listView1.SelectedItems[0].SubItems[1].Text;
                         break;
+                    case "Mitarbeiter":
+                        ID = listView1.SelectedItems[0].SubItems[2].Text;
+                        ZeilenInfo[0] = listView1.SelectedItems[0].SubItems[1].Text + " " + listView1.SelectedItems[0].SubItems[0].Text;
+                        break;
                 }
             }
         }
@@ -88,6 +92,13 @@ namespace Fahrrad_ERP
                     listView1.Columns.Add("Vorname", 120);
                     listView1.Columns.Add("Ort", 120);
                     listview1_Kunden();
+                    break;
+                case "Mitarbeiter":
+                    this.Text = "Mitarbeiter wählen";
+                    listView1.Columns.Add("Nachname", 120);
+                    listView1.Columns.Add("Vorname", 120);
+                    listView1.Columns.Add("login", 120);
+                    listview1_Mitarbeiter();
                     break;
             }
 
@@ -154,6 +165,22 @@ namespace Fahrrad_ERP
                 {
                     listView1.Items.Add(new ListViewItem(new string[] { list[0].ToString(), list[2].ToString(), list[3].ToString(), list[4].ToString() }));
                 }
+            }
+            set_nummer(0);
+        }
+        private void listview1_Mitarbeiter()
+        {
+            string sqlcmd = "SELECT Nachname, Name, login FROM personal ORDER BY Nachname";
+            Database_Fahrrad daten = new Database_Fahrrad();
+            dataList = daten.getData(sqlcmd);
+            listView1.Items.Clear();
+            listView1.Items.Add(new ListViewItem(new string[] { "Administrator", "", "Admin" }));
+            listView1.Items.Add(new ListViewItem(new string[] { "Ladenmitarbeiter", "alle", "Laden" }));
+            listView1.Items.Add(new ListViewItem(new string[] { "Verwaltungsmitarbeiter", "alle", "Verwaltung"}));
+            listView1.Items.Add(new ListViewItem(new string[] { "Werkstattmitarbeiter", "alle", "Werkstatt" }));
+            foreach (List<string> list in dataList)
+            {
+               listView1.Items.Add(new ListViewItem(new string[] { list[0].ToString(), list[1].ToString(), list[2].ToString()}));
             }
             set_nummer(0);
         }

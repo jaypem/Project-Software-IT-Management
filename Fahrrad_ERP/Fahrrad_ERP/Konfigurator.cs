@@ -356,5 +356,59 @@ namespace Fahrrad_ERP
                 ((main)this.MdiParent).Status("Auswahl abgebrochen!");
             }
         }
+
+        public void print()
+        {
+            Druck dr = new Druck();
+            if (labelKon.Text == "")
+            {
+                printDocument1.DocumentName = "Konfiguration_ungespeichert";
+            }
+            else
+            {
+                printDocument1.DocumentName = labelKon.Text.Trim(' ');
+            }
+            PrintDialog p = printDialog1;
+            p.PrinterSettings = dr.Einstellungen();
+            if (p.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.PrinterSettings = p.PrinterSettings;
+                printDocument1.Print();
+            }
+        }
+        public void preprint()
+        {
+            Druck dr = new Druck();
+            if (labelKon.Text == "")
+            {
+                printDocument1.DocumentName = "Konfiguration_ungespeichert";
+            }
+            else
+            {
+                printDocument1.DocumentName = labelKon.Text.Trim(' ');
+            }
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            List<List<string>> dataListInhalt = new List<List<string>>();
+            for (int i = 0; i < listViewKonfig.Items.Count; i++)
+            {
+                ListViewItem item = listViewKonfig.Items[i];
+                List<string> zeile = new List<string>();
+                for (int j = 0; j < item.SubItems.Count; j++)
+                {
+                    zeile.Add(item.SubItems[j].Text);
+                }
+                dataListInhalt.Add(zeile);
+            }
+            string konfnr = labelKon.Text.Replace("Konfiguraiton ", "");
+            string gesamt = sum().ToString("0.00");
+            Druck dr = new Druck();
+            dr.Briefkopf(e.Graphics);
+            dr.Geschäftsangaben(e.Graphics, 1, 1);
+            dr.Postenauflistung(e.Graphics, "", konfignr, gesamt, "Konfiguration", DateTime.Now.Date.ToShortDateString(), dataListInhalt);  
+        }
     }
 }

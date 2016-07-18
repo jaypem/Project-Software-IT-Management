@@ -118,7 +118,6 @@ namespace Fahrrad_ERP
             if (labelNummer.Text != "")
             {
                 printDocument1.DocumentName = "Rechnung" + bestellung[0];
-                printPreviewDialog1.Name = "Rechnung" + bestellung[0];
                 printPreviewDialog1.ShowDialog();
             }
             else
@@ -144,9 +143,5 @@ namespace Fahrrad_ERP
             dr.Postenauflistung(e.Graphics, kunde, bestellung[0], bestellung[3],"Rechnung", bestellung[2], dataList);
         }
 
-        private void Rechnung_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

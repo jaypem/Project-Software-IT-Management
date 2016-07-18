@@ -147,13 +147,6 @@ namespace Fahrrad_ERP
             showForm(new Konfigurator());
         }
 
-<<<<<<< HEAD
-        private void wareneingangToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            showForm(new Wareneingang());
-        }
-
-=======
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Drucken();
@@ -190,6 +183,9 @@ namespace Fahrrad_ERP
                     case "Rechnung":
                         ((Rechnung)ActiveMdiChild).print();
                         break;
+                    case "Konfigurator":
+                        ((Konfigurator)ActiveMdiChild).print();
+                        break;
                     default:
 
                         break;
@@ -204,6 +200,9 @@ namespace Fahrrad_ERP
                 {
                     case "Rechnung":
                         ((Rechnung)ActiveMdiChild).printPre();
+                        break;
+                    case "Konfigurator":
+                        ((Konfigurator)ActiveMdiChild).preprint();
                         break;
                     default:
 
@@ -259,6 +258,17 @@ namespace Fahrrad_ERP
         {
             öffnen(sender, e);
         }
->>>>>>> 4066934c40cf4df5de4a1a54f5e8d6ae45d196f9
+
+        private void taskManagerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            taskManagement t = new taskManagement();
+            t.Show();
+        }
+
+        private void wareneingangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showForm(new Wareneingang());
+        }
+
     }
 }
