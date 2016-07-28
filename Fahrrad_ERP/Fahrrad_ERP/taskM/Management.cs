@@ -24,7 +24,14 @@ namespace Fahrrad_ERP.taskM
             str = dataList[0][0].ToString();
             return str;
         }
-        
+        public List<List<string>> getStatusHistorie(string Auftragsnummer)
+        {
+            //gibt die Statushistorie zurück
+            List<List<string>> dataList = new List<List<string>>();
+            string sqlcmd = "SELECT Aktionsnummer, StatusID, Bearbeiter, Zeitstempel FROM auftragshistorie WHERE Auftragsnummer = '" + Auftragsnummer + "'";
+            dataList = daten.getData(sqlcmd);
+            return dataList;
+        }
         public bool isAktionChange(string AufNr, string AkNr)
         {
             //überprüft ob die ggb. Aktion auch die letzte zum Auftrag ist

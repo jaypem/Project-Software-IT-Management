@@ -22,27 +22,5 @@ namespace Fahrrad_ERP.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=|DataDirectory|\\MyDatabase#1.sdf;Password=123456;Persist Security Inf" +
-            "o=True")]
-        public string FahradConnectionString {
-            get {
-                return ((string)(this["FahradConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\Fahrrad_Daten.mdf;Integ" +
-            "rated Security=True;User Instance=True")]
-        public string Fahrrad_DatenConnectionString {
-            get {
-                return ((string)(this["Fahrrad_DatenConnectionString"]));
-            }
-        }
     }
 }

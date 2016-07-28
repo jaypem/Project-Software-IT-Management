@@ -50,6 +50,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.checkBoxLogo = new System.Windows.Forms.CheckBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -59,6 +60,8 @@
             this.textBoxRegister = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBoxUmsatzID = new System.Windows.Forms.MaskedTextBox();
+            this.buttonLogo = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label17 = new System.Windows.Forms.Label();
@@ -69,13 +72,15 @@
             this.textBoxBIC = new System.Windows.Forms.TextBox();
             this.textBoxBank = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAb = new System.Windows.Forms.Button();
+            this.buttonSp = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -318,6 +323,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel2.Controls.Add(this.checkBoxLogo, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.label16, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label10, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label11, 0, 2);
@@ -327,6 +333,8 @@
             this.tableLayoutPanel2.Controls.Add(this.textBoxRegister, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.label13, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.textBoxUmsatzID, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.buttonLogo, 3, 5);
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 1, 5);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -341,6 +349,18 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(500, 207);
             this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // checkBoxLogo
+            // 
+            this.checkBoxLogo.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.checkBoxLogo.AutoSize = true;
+            this.checkBoxLogo.Location = new System.Drawing.Point(44, 156);
+            this.checkBoxLogo.Name = "checkBoxLogo";
+            this.checkBoxLogo.Size = new System.Drawing.Size(53, 17);
+            this.checkBoxLogo.TabIndex = 3;
+            this.checkBoxLogo.Text = "Logo:";
+            this.checkBoxLogo.UseVisualStyleBackColor = true;
+            this.checkBoxLogo.CheckedChanged += new System.EventHandler(this.checkBoxLogo_CheckedChanged);
             // 
             // label16
             // 
@@ -427,10 +447,31 @@
             this.tableLayoutPanel2.SetColumnSpan(this.textBoxUmsatzID, 2);
             this.textBoxUmsatzID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxUmsatzID.Location = new System.Drawing.Point(103, 123);
-            this.textBoxUmsatzID.Mask = "00000";
             this.textBoxUmsatzID.Name = "textBoxUmsatzID";
             this.textBoxUmsatzID.Size = new System.Drawing.Size(244, 20);
             this.textBoxUmsatzID.TabIndex = 18;
+            // 
+            // buttonLogo
+            // 
+            this.buttonLogo.Location = new System.Drawing.Point(353, 153);
+            this.buttonLogo.Name = "buttonLogo";
+            this.buttonLogo.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogo.TabIndex = 20;
+            this.buttonLogo.Text = "öffnen";
+            this.buttonLogo.UseVisualStyleBackColor = true;
+            this.buttonLogo.Click += new System.EventHandler(this.buttonLogo_Click);
+            // 
+            // pictureBox1
+            // 
+            this.tableLayoutPanel2.SetColumnSpan(this.pictureBox1, 2);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(103, 153);
+            this.pictureBox1.Name = "pictureBox1";
+            this.tableLayoutPanel2.SetRowSpan(this.pictureBox1, 2);
+            this.pictureBox1.Size = new System.Drawing.Size(244, 54);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
             // 
             // tabPage3
             // 
@@ -547,8 +588,8 @@
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.buttonAb, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.buttonSp, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 239);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -557,35 +598,39 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(514, 33);
             this.tableLayoutPanel4.TabIndex = 17;
             // 
-            // button2
+            // buttonAb
             // 
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(260, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Abbrechen";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonAb.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonAb.Location = new System.Drawing.Point(260, 3);
+            this.buttonAb.Name = "buttonAb";
+            this.buttonAb.Size = new System.Drawing.Size(136, 23);
+            this.buttonAb.TabIndex = 10;
+            this.buttonAb.Text = "Abbrechen";
+            this.buttonAb.UseVisualStyleBackColor = true;
+            this.buttonAb.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // buttonSp
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(118, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Speichern";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonSp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSp.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonSp.Location = new System.Drawing.Point(118, 3);
+            this.buttonSp.Name = "buttonSp";
+            this.buttonSp.Size = new System.Drawing.Size(136, 23);
+            this.buttonSp.TabIndex = 9;
+            this.buttonSp.Text = "Speichern";
+            this.buttonSp.UseVisualStyleBackColor = true;
+            this.buttonSp.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Geschäftsdaten
             // 
-            this.AcceptButton = this.button1;
+            this.AcceptButton = this.buttonSp;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.button2;
+            this.CancelButton = this.buttonAb;
             this.ClientSize = new System.Drawing.Size(514, 272);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tabControl1);
@@ -599,6 +644,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
@@ -647,10 +693,14 @@
         private System.Windows.Forms.TextBox textBoxBIC;
         private System.Windows.Forms.TextBox textBoxBank;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAb;
+        private System.Windows.Forms.Button buttonSp;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.CheckBox checkBoxLogo;
+        private System.Windows.Forms.Button buttonLogo;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

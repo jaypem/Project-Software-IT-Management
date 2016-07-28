@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Fahrrad_ERP.exe" version="2.0.0.1" publicKeyToken="58e6b2b625d22377" language="de-DE" processorArchitecture="x86" type="win32" />
+  <description asmv2:iconFile="RadIcon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Fahrrad_ERP" version="2.0.0.1" language="neutral" processorArchitecture="x86" />
+    <commandLine file="Fahrrad_ERP.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC-Manifestoptionen
+          Wenn Sie die Zugangsebene für das Windows-Benutzerkonto ändern möchten, ersetzen Sie den 
+          requestedExecutionLevel-Knoten durch eines der folgenden Elemente.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Löschen Sie den requestedExecutionLevel-Knoten, wenn Sie 
+         zum Gewährleisten der Abwärtskompatibilität die Datei- und Registrierungsvirtualisierung verwenden möchten.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Data.SqlServerCe" version="3.5.1.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Fahrrad_ERP.exe" size="898560">
+      <assemblyIdentity name="Fahrrad_ERP" version="2.0.0.1" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>1pGT/dorDP3XLRO/iohXVb2ZP8k=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySql.Data.dll" size="457728">
+      <assemblyIdentity name="MySql.Data" version="6.9.8.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>B6Mze1CmSDAzJDIOQ/grJAi8tBQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\System.Data.SqlServerCe.resources.dll" size="42864">
+      <assemblyIdentity name="System.Data.SqlServerCe.resources" version="3.5.1.0" publicKeyToken="89845DCD8080CC91" language="de" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>xGz3a3IiqwXM6o/8O4WddqnJkdU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Fahrrad_ERP.exe.config" size="5741">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>JhUd/lQRxPjveXcOrSob5HV2+zU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="RadIcon.ico" size="165658">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>awDx09nxQwiumWDqKfwsG/pz3/8=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=N10151\nbadmin" issuerKeyHash="01f949cf26f92aee3aaa715ff41ceef4ea1bf966" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>0srW3H0USg8MkvAyBfRBcE2Tpm4=</DigestValue></Reference></SignedInfo><SignatureValue>eIcUUnSR7sXjHsjCvrP8N01kg8K+r46MWOefSi4lbgoGI88JFQE90vMUDz7vVRcw2apNOnRCBP6n13tg0N9BHO8DLQKpnriEoWs+tT+UTYPsQ5phTcV/n6UMHFntnPxIWx8hy3SD0gsQqn2OniCaqz+/jyeeF/YFUNLZh/BSMBc=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>z4atUKyRHdI/Ssg9aouyaomJQgdPxKmyMFB2mTHG5EE3tbH8i+jfsILKRxFHnDcVNIXctrKm9LevX9RF2fyHIse/MaeBxo5JoVbRjSOCNGmI7BwmcRJekHKiAQwq4jS2TEAB0YIh0t4BKiO1GJKSaSzQQdbuyQlfbXNpGqdmJW8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="6ea6934d7041f40532f0920c0f4a147ddcd6cad2" Description="" Url=""><as:assemblyIdentity name="Fahrrad_ERP.exe" version="2.0.0.1" publicKeyToken="58e6b2b625d22377" language="de-DE" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=N10151\nbadmin</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>ZHqx1libPPG64nTHKvnhB4e3IBI=</DigestValue></Reference></SignedInfo><SignatureValue>SbyvxMnYzRD5VwWNVupGfhfFmD8gJ+1n6q6SgpljGa2hbs98htA2c/KcLhI2bxUUqZBVfXY2QJ6VTGqlBZMdOLZsVIjFHH6tbe2lLEAeXSH+SoHW0GppR/W+j9Cc7ZaEI9DJk7HPVJzrpH2nwPyMh9HrV/N+W2qvxxi/5n1GyqA=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>z4atUKyRHdI/Ssg9aouyaomJQgdPxKmyMFB2mTHG5EE3tbH8i+jfsILKRxFHnDcVNIXctrKm9LevX9RF2fyHIse/MaeBxo5JoVbRjSOCNGmI7BwmcRJekHKiAQwq4jS2TEAB0YIh0t4BKiO1GJKSaSzQQdbuyQlfbXNpGqdmJW8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQLKk8xd7o1YhM3I4/fsVNhjANBgkqhkiG9w0BAQUFADAnMSUwIwYDVQQDHhwATgAxADAAMQA1ADEAXABuAGIAYQBkAG0AaQBuMB4XDTE2MDcyODExMjczMFoXDTE3MDcyODE3MjczMFowJzElMCMGA1UEAx4cAE4AMQAwADEANQAxAFwAbgBiAGEAZABtAGkAbjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAz4atUKyRHdI/Ssg9aouyaomJQgdPxKmyMFB2mTHG5EE3tbH8i+jfsILKRxFHnDcVNIXctrKm9LevX9RF2fyHIse/MaeBxo5JoVbRjSOCNGmI7BwmcRJekHKiAQwq4jS2TEAB0YIh0t4BKiO1GJKSaSzQQdbuyQlfbXNpGqdmJW8CAwEAATANBgkqhkiG9w0BAQUFAAOBgQAb+yUgJgfsEy0js1wCnCYjwB7qUiOVMuaiUJSGlyVwJysHPlY1wuTxh4AC0389gmFVJ55t53dyYkqJZ0RGjdTtWH+OWR7rmkUeBUupbtXIqIA+SXYS3/hFdv72QMkx733vS44nzmmtjRmrCFXj70ZlLlCbbbTNyw5RE8TbM3VlzA==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

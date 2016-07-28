@@ -12,26 +12,27 @@ namespace Fahrrad_ERP
 {
     public partial class Mitarbeiter_ändern : Form
     {
-        public Mitarbeiter_ändern()
+        public Mitarbeiter_ändern(string vers)
         {
             InitializeComponent();
+            version = vers;
         }
 
         public string login;
-        public int version;
+        string version;
 
         private void Mitarbeiter_Load(object sender, EventArgs e)
         {
             //Form kann sowohl zum Anlegen als auch Bearbeiten von Daten genutzt werden. Titel und Button Text werden hier gesetzt.
-            if (version == 0)
+            if (version == "Anlegen")
             {
-                button1.Text = "Anlegen";
+                buttonOk.Text = "Anlegen";
                 this.Text = "Mitarbeiter anlegen";
                 textBox1.Enabled = true;
             }
-            else
+            if (version == "Bearbeiten")
             {
-                button1.Text = "Speichern";
+                buttonOk.Text = "Speichern";
                 this.Text = "Mitarbeiter bearbeiten";
                 textBox1.Enabled = false;
                 Data_Load();
@@ -76,7 +77,7 @@ namespace Fahrrad_ERP
             if (checkBox4.Checked == true) str[8] = "1"; else str[8] = "";
             //Datensatz vorbereiten
             //Fall 0: Neu anlegen des Mitarbeiters
-            if (version == 0 && valide() == true)
+            if (version == "Anlegen" && valide() == true)
             {
                 str[1] = createPasswort();
                 string sqlcmd = "INSERT INTO `personal`(`login`, `passwort`, `Nachname`, `Name`, `abteilung`, `admin`, `ansichtL`, `ansichtV`, `ansichtW`) VALUES ('" + 
@@ -85,15 +86,15 @@ namespace Fahrrad_ERP
                 daten.setData(sqlcmd);
                 MessageBox.Show("Der Mitarbeiter " + str[3] + " " + str[2] + " wurde erfolgreich angelegt. \nBitte teilen Sie dem Mitarbeiter das Initialpasswort >>"
                     + str[1] + " << mit und weisen Sie ihn darauf hin, dass er dieses bei der Erstanmeldung ändern soll.", "Eingabe erfolgreich", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                this.DialogResult = DialogResult.OK;
             }
             //Fall 1: Bearbeiten des Mitarbeiters
-            if (version == 1 && valide() == true)
+            if (version == "Bearbeiten" && valide() == true)
             {
                 string sqlcmd = "UPDATE `personal` SET `Nachname`='" + str[2] + "',`Name`='" + str[3] + "',`abteilung`='" + str[4] + "',`admin`='" + str[5] + "',`ansichtL`='" + str[6] + "',`ansichtV`='" + str[7] + "',`ansichtW`='" + str[8] + "' WHERE `login` LIKE '"+str[0]+"'";
                 Database_Fahrrad daten = new Database_Fahrrad();
                 daten.setData(sqlcmd);
-                this.Close();
+                this.DialogResult = DialogResult.OK;
             }
         }
 
@@ -111,10 +112,10 @@ namespace Fahrrad_ERP
             textBox4.ForeColor = Color.Black;
             //bei anlegen, wird Login auf Existenz geprüft
             if (textBox1.Enabled == true) {
-            if (textBox1.Text.Length <= 2)
+            if (textBox1.Text.Length < 3 || textBox1.Text.Length > 45)
             {
                 val = false;
-                MessageBox.Show("Der Login muss aus mindestens 3 Zeichen bestehen!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Der Login muss aus 3-45 Zeichen bestehen!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 textBox1.BackColor = Color.Red;
             }
             else
@@ -124,6 +125,12 @@ namespace Fahrrad_ERP
                     val = false;
                     MessageBox.Show("Das Feld Login enthält ungültige Zeichen!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textBox1.ForeColor = Color.Red;
+                } else 
+                    //sperren bestimmter Namen!
+                    if(textBox1.Text.ToLower() == "admin" || textBox1.Text.ToLower() == "verwaltung" || textBox1.Text.ToLower() == "werkstatt" || textBox1.Text.ToLower() == "laden") {
+                        val = false;
+                        MessageBox.Show("Der gewählte Login darf nicht verwendet werden!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        textBox1.ForeColor = Color.Red;
                 }
                 else
                 {
@@ -141,10 +148,10 @@ namespace Fahrrad_ERP
             }
             }
             //Name prüfen
-            if (textBox2.Text.Length <= 1)
+            if (textBox2.Text.Length < 2 || textBox2.Text.Length > 45)
             {
                 val = false;
-                MessageBox.Show("Namen müssen aus mindestens 2 Zeichen bestehen!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Namen müssen aus 2 - 45 Zeichen bestehen!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 textBox2.BackColor = Color.Red;
             }
             else
@@ -157,10 +164,10 @@ namespace Fahrrad_ERP
                 }
             }
             //Vorname prüfen
-            if (textBox3.Text.Length <= 1)
+            if (textBox3.Text.Length < 2 || textBox3.Text.Length > 45)
             {
                 val = false;
-                MessageBox.Show("Vornamen müssen aus mindestens 2 Zeichen bestehen!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vornamen müssen aus 2 - 45 Zeichen bestehen!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 textBox3.BackColor = Color.Red;
             }
             else
@@ -194,8 +201,6 @@ namespace Fahrrad_ERP
                 val = false;
                 MessageBox.Show("Wählen Sie mindestens eine Ansicht aus, für die der Mitarbeiter berechtigt ist!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-
             return val;
         }
 

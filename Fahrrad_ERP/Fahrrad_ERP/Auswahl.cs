@@ -13,25 +13,33 @@ namespace Fahrrad_ERP
     {
         public Auswahl(string Version)
         {
+            //übergabe von Version (als welches es geöffnet wird) und hinzufügen des Sorters
             InitializeComponent();
             listView1.ListViewItemSorter = sorter;
             vers = Version;
         }
-        private string[] ZeilenInfo = new string[4];
-        private string ID;
-        private string vers;
-        private List<List<string>> dataList = new List<List<string>>();
-        private ListViewSortieren sorter = new ListViewSortieren();
+        //Standart-Auswahl-Fenster
+        //
+        //Hier kann der Benutzer eine Auswahl aus verschiedenen Informationen treffen, die je nach Füllung an das Parent Fenster zurückgegeben werden
+        //Ordnen und Filtern ist möglich
 
+        string[] ZeilenInfo = new string[5];
+        string ID = "";
+        string vers;
+        List<List<string>> dataList = new List<List<string>>(); //Füll-Daten
+        ListViewSortieren sorter = new ListViewSortieren();
+        List<List<string>> dataShortList = new List<List<string>>(); //Filter-Daten
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ListView.SelectedIndexCollection indexes = listView1.SelectedIndices;
-            foreach (int i in indexes) set_nummer(1);
-        }
-        private void set_nummer(int index)
-        {
-            if (index != 0)
+            //Ausgewählte Daten abspeichern, wenn ein Feld gewählt wird.
+            if (listView1.SelectedItems.Count != 0)
             {
+                set_nummer();
+            }
+        }
+        private void set_nummer()
+        {
+            //Rückgabe der gewünschten Zeileninformationen je nach Version
                 switch (vers)
                 {
                     case "Bestellung":
@@ -39,7 +47,8 @@ namespace Fahrrad_ERP
                         ZeilenInfo[1] = listView1.SelectedItems[0].SubItems[1].Text;
                         ZeilenInfo[2] = listView1.SelectedItems[0].SubItems[2].Text;
                         ZeilenInfo[3] = listView1.SelectedItems[0].SubItems[3].Text;
-                        ID = listView1.SelectedItems[0].SubItems[4].Text;
+                        ZeilenInfo[4] = listView1.SelectedItems[0].SubItems[4].Text;
+                        ID = listView1.SelectedItems[0].SubItems[0].Text;
                         break;
                     case "Konfiguration":
                         ID = listView1.SelectedItems[0].SubItems[0].Text;
@@ -53,19 +62,21 @@ namespace Fahrrad_ERP
                         ZeilenInfo[0] = listView1.SelectedItems[0].SubItems[1].Text + " " + listView1.SelectedItems[0].SubItems[0].Text;
                         break;
                 }
-            }
         }
 
         public string[] get_ZeilenInfo()
         {
+            //Rückgabe der ZeilenInformationen für die ParentForm
             return ZeilenInfo;
         }
         public string get_ID()
         {
+            //Rückgabe der ID fü die Parentform
             return ID;
         }
         private void Bestellung_wählen_Load(object sender, EventArgs e)
         {
+            //Nach Version werden die Spalten angelegt und mit Daten gefüllt
             switch (vers)
             {
                 case "Bestellung":
@@ -101,10 +112,12 @@ namespace Fahrrad_ERP
                     listview1_Mitarbeiter();
                     break;
             }
-
+            //Übergabe der Daten, die in der Listview stehen
+            dataShortList = getDataShortList();
         }
         private void listview1_Konfiguraiton()
         {
+            //Abfrage und Füllen der Daten für den Fall, dass eine Konfiguration ausgewählt wird
             string sqlcmd = "SELECT KonfigurationID, kunden.Firma, kunden.Nachname, kunden.Name, Bezeichnung, kunden.Haendler FROM konfigurationen LEFT JOIN kunden ON konfigurationen.KundenID = kunden.KundenID ORDER BY KonfigurationID";
             Database_Fahrrad daten = new Database_Fahrrad();
             dataList = daten.getData(sqlcmd);
@@ -128,10 +141,10 @@ namespace Fahrrad_ERP
                     }
                 }
             }
-            set_nummer(0);
         }
         private void listview1_Bestellung()
         {
+            //Abfrage und Füllen der Daten für den Fall, dass eine Bestellung ausgewählt wird
             string sqlcmd = "SELECT BestellungID, kunden.Firma, kunden.Nachname, kunden.Name, Datum, Bestellsumme, kunden.KundenID, kunden.Haendler FROM bestellung JOIN kunden ON bestellung.KundenID = kunden.KundenID";
             Database_Fahrrad daten = new Database_Fahrrad();
             dataList = daten.getData(sqlcmd);
@@ -147,10 +160,10 @@ namespace Fahrrad_ERP
                     listView1.Items.Add(new ListViewItem(new string[] { list[0].ToString(), list[2].ToString() + ", " + list[3].ToString(), (Convert.ToDateTime(list[4])).ToString("d"), (Convert.ToDecimal(list[5])).ToString("0.00 €"), list[6].ToString() }));
                 }
             }
-            set_nummer(0);
         }
         private void listview1_Kunden()
         {
+            //Abfrage und Füllen der Daten für den Fall, dass ein Kunde ausgewählt wird
             string sqlcmd = "SELECT KundenID, Firma, Nachname, Name, Ort, Haendler FROM kunden";
             Database_Fahrrad daten = new Database_Fahrrad();
             dataList = daten.getData(sqlcmd);
@@ -166,10 +179,10 @@ namespace Fahrrad_ERP
                     listView1.Items.Add(new ListViewItem(new string[] { list[0].ToString(), list[2].ToString(), list[3].ToString(), list[4].ToString() }));
                 }
             }
-            set_nummer(0);
         }
         private void listview1_Mitarbeiter()
         {
+            //Abfrage und Füllen der Daten für den Fall, dass ein Mitarbeiter ausgewählt wird
             string sqlcmd = "SELECT Nachname, Name, login FROM personal ORDER BY Nachname";
             Database_Fahrrad daten = new Database_Fahrrad();
             dataList = daten.getData(sqlcmd);
@@ -182,7 +195,6 @@ namespace Fahrrad_ERP
             {
                listView1.Items.Add(new ListViewItem(new string[] { list[0].ToString(), list[1].ToString(), list[2].ToString()}));
             }
-            set_nummer(0);
         }
         private void listView1_ColumnClick(object sender, ColumnClickEventArgs e)
         {
@@ -209,7 +221,41 @@ namespace Fahrrad_ERP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            //Schließt das Fenster und gibt OK zurück, wenn eine ID gewählt wurde, ansonsten wird abbrechen zurückgegeben
+            if (ID != "")
+            {
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                this.DialogResult = DialogResult.Cancel;
+            }
+        }
+
+        private void textBoxFilter_TextChanged(object sender, EventArgs e)
+        {
+            //Bei jeder Textveränderung in der Filter TextBox wird die Listview gefiltert
+            listView1.Items.Clear();
+            ListViewFiltern lf = new ListViewFiltern();
+            foreach (List<string> list in lf.LookFor(dataShortList, textBoxFilter.Text)) {
+                listView1.Items.Add(new ListViewItem(list.ToArray()));
+            }
+        }
+        private List<List<string>> getDataShortList()
+        {
+            //Gibt eine Liste mit den Items aus der ListView zurück
+            List<List<string>> Liste = new List<List<string>>();
+            foreach (ListViewItem item in listView1.Items)
+            {
+                List<string> list = new List<string>();
+                for (int i = 0; i < item.SubItems.Count; i++)
+                {
+                    list.Add(item.SubItems[i].Text);                    
+                }
+                Liste.Add(list.ToList());
+                list.Clear();
+            }
+            return Liste;
         }
 
     }

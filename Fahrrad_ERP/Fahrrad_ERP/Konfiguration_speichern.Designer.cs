@@ -128,7 +128,7 @@
             // 
             this.buttonSpeichern.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSpeichern.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonSpeichern.Location = new System.Drawing.Point(15, 142);
+            this.buttonSpeichern.Location = new System.Drawing.Point(25, 142);
             this.buttonSpeichern.Name = "buttonSpeichern";
             this.buttonSpeichern.Size = new System.Drawing.Size(122, 23);
             this.buttonSpeichern.TabIndex = 10;
@@ -140,7 +140,7 @@
             // 
             this.buttonAb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAb.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonAb.Location = new System.Drawing.Point(150, 142);
+            this.buttonAb.Location = new System.Drawing.Point(160, 142);
             this.buttonAb.Name = "buttonAb";
             this.buttonAb.Size = new System.Drawing.Size(122, 23);
             this.buttonAb.TabIndex = 11;
@@ -153,7 +153,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonAb;
-            this.ClientSize = new System.Drawing.Size(284, 177);
+            this.ClientSize = new System.Drawing.Size(294, 187);
             this.Controls.Add(this.buttonAb);
             this.Controls.Add(this.buttonSpeichern);
             this.Controls.Add(this.buttonKunde);
@@ -164,7 +164,13 @@
             this.Controls.Add(this.radioButtonKunde);
             this.Controls.Add(this.radioButtonVorlage);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(300, 215);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(300, 215);
             this.Name = "Konfiguration_speichern";
+            this.ShowIcon = false;
             this.Text = "Konfiguration speichern";
             this.ResumeLayout(false);
             this.PerformLayout();

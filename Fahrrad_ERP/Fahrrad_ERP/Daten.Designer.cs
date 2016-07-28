@@ -25,7 +25,7 @@ namespace Fahrrad_ERP {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Martin Thrum")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Geschäftsführer {
             get {
                 return ((string)(this["Geschäftsführer"]));
@@ -37,7 +37,7 @@ namespace Fahrrad_ERP {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Carl-Zeiss-Straße 3")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Add1 {
             get {
                 return ((string)(this["Add1"]));
@@ -49,7 +49,7 @@ namespace Fahrrad_ERP {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("4. OG")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Add2 {
             get {
                 return ((string)(this["Add2"]));
@@ -61,7 +61,7 @@ namespace Fahrrad_ERP {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Mein schöner Fahrradladen GmbH")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Name {
             get {
                 return ((string)(this["Name"]));
@@ -73,7 +73,7 @@ namespace Fahrrad_ERP {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("07743")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string PLZ {
             get {
                 return ((string)(this["PLZ"]));
@@ -85,7 +85,7 @@ namespace Fahrrad_ERP {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Jena")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Ort {
             get {
                 return ((string)(this["Ort"]));
@@ -97,7 +97,7 @@ namespace Fahrrad_ERP {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("03641 / 9-0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Tel {
             get {
                 return ((string)(this["Tel"]));
@@ -109,7 +109,7 @@ namespace Fahrrad_ERP {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("03641 / 9-1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Fax {
             get {
                 return ((string)(this["Fax"]));
@@ -121,7 +121,7 @@ namespace Fahrrad_ERP {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("martin.thrum@uni-jena.de")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Mail {
             get {
                 return ((string)(this["Mail"]));
@@ -133,7 +133,7 @@ namespace Fahrrad_ERP {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Amtsgericht Jena")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Gericht {
             get {
                 return ((string)(this["Gericht"]));
@@ -145,7 +145,7 @@ namespace Fahrrad_ERP {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("123456")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Register {
             get {
                 return ((string)(this["Register"]));
@@ -157,7 +157,7 @@ namespace Fahrrad_ERP {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("100100100")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string UmsatzID {
             get {
                 return ((string)(this["UmsatzID"]));
@@ -169,7 +169,7 @@ namespace Fahrrad_ERP {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DE00 1234 4567 8910 1122 3344 55")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string IBAN {
             get {
                 return ((string)(this["IBAN"]));
@@ -181,7 +181,7 @@ namespace Fahrrad_ERP {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DEUTSCHLAND")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string BIC {
             get {
                 return ((string)(this["BIC"]));
@@ -193,13 +193,37 @@ namespace Fahrrad_ERP {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Deutsche Indialbank")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Bank {
             get {
                 return ((string)(this["Bank"]));
             }
             set {
                 this["Bank"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Bild {
+            get {
+                return ((string)(this["Bild"]));
+            }
+            set {
+                this["Bild"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool BildNutzen {
+            get {
+                return ((bool)(this["BildNutzen"]));
+            }
+            set {
+                this["BildNutzen"] = value;
             }
         }
     }

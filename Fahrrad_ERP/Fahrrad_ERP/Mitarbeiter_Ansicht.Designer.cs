@@ -51,10 +51,14 @@
             this.Nachname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Vorname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.login = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tb_search = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -62,6 +66,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.27785F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.72215F));
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.listView1, 0, 1);
@@ -71,6 +76,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(659, 382);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -325,6 +331,35 @@
             this.login.Text = "Benutzer";
             this.login.Width = 87;
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.tb_search);
+            this.flowLayoutPanel2.Controls.Add(this.label6);
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(446, 3);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(210, 29);
+            this.flowLayoutPanel2.TabIndex = 4;
+            // 
+            // tb_search
+            // 
+            this.tb_search.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tb_search.Location = new System.Drawing.Point(51, 3);
+            this.tb_search.Name = "tb_search";
+            this.tb_search.Size = new System.Drawing.Size(156, 20);
+            this.tb_search.TabIndex = 0;
+            this.tb_search.TextChanged += new System.EventHandler(this.tb_search_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 6);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Filter:";
+            // 
             // Mitarbeiter_Ansicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,14 +368,15 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(675, 420);
             this.Name = "Mitarbeiter_Ansicht";
-            this.ShowIcon = false;
-            this.Text = "Mitarbeiter";
+            this.Text = "Mitarbeiter - Übersicht";
             this.Load += new System.EventHandler(this.Mitarbeiter_sehen_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -370,5 +406,8 @@
         private System.Windows.Forms.ColumnHeader Nachname;
         private System.Windows.Forms.ColumnHeader Vorname;
         private System.Windows.Forms.ColumnHeader login;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.TextBox tb_search;
+        private System.Windows.Forms.Label label6;
     }
 }

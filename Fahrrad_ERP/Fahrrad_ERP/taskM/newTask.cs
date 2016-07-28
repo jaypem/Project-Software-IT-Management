@@ -11,16 +11,32 @@ namespace Fahrrad_ERP.taskM
 {
     public partial class newTask : Form
     {
-        public newTask()
+        string an;
+        string be;
+        string na;
+        public newTask(string Adressat = "", string Betreff = "", string Nachricht = "")
         {
             InitializeComponent();
+            an = Adressat;
+            add = Adressat;
+            be = Betreff;
+            na = Nachricht;
         }
         Database_Fahrrad daten = new Database_Fahrrad();
         string add;
         string[] Zeileninfo;
         private void newTask_Load(object sender, EventArgs e)
         {
-
+            textBoxBetreff.Text = be;
+            textBoxNachricht.Text = na;
+            if (an != "")
+            {
+                buttonAn.Text = an;
+            }
+            else
+            {
+                buttonAn.Text = "wählen...";
+            }
         }
 
         private void buttonAn_Click(object sender, EventArgs e)

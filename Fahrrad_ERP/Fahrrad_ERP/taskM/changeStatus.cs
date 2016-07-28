@@ -15,6 +15,7 @@ namespace Fahrrad_ERP.taskM
         string Status;
         public changeStatus(string Nr, string akStatus)
         {
+            //Übergabe der Auftragsnummer und des aktuellen Status
             aufnr = Nr;
             Status = akStatus;
             InitializeComponent();
@@ -22,24 +23,29 @@ namespace Fahrrad_ERP.taskM
         Database_Fahrrad daten = new Database_Fahrrad();
         private void changeStatus_Load(object sender, EventArgs e)
         {
-            label2.Text = aufnr;
+            //Datenbankanfrage auf alle möglichen Statusausprägungen
+            labelAuf.Text = aufnr;
             string sqlcmd = "SELECT StatusID, Bezeichnung FROM auftragsstatus ORDER BY StatusID";
             List<List<string>> dataList = new List<List<string>>();
             dataList = daten.getData(sqlcmd);
+            //setzen der Statusausprägungen in ComboBox
             foreach (List<string> list in dataList)
             {
                 comboBox1.Items.Add(list[0].ToString() + " - " + list[1].ToString());
             }
+            //StatusID aus aktuellen Status suchen und in ComboBox setzen
             sqlcmd = "SELECT StatusID FROM auftragsstatus WHERE Bezeichnung = '"+Status+"'";
             dataList.Clear();
             dataList = daten.getData(sqlcmd);
-            comboBox1.SelectedIndex = Convert.ToInt16(dataList[0][0].ToString());
-
+            int index = comboBox1.FindString(dataList[0][0].ToString() + " - "+Status);
+            comboBox1.SelectedIndex = index;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonOK_Click(object sender, EventArgs e)
         {
-            string stat = comboBox1.SelectedIndex.ToString();
+            //Seperieren der StatusID aus dem ComboBox Feld und anschließendes setzen als neue Aktion
+            int index = comboBox1.SelectedItem.ToString().IndexOf('-');
+            string stat = comboBox1.SelectedItem.ToString().Remove(index - 1);
             string sqlcmd = "INSERT INTO auftragshistorie (Auftragsnummer, StatusID, Bearbeiter) VALUES ('" + aufnr + "', '"+stat+"', '" + User.login + "')";
             daten.setData(sqlcmd);
             this.DialogResult = DialogResult.OK;

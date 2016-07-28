@@ -34,7 +34,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonChange = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.listViewAufgaben = new System.Windows.Forms.ListView();
             this.Nummer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -47,6 +47,12 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonNeu = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.listViewAuftrag = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBoxAuftrag = new System.Windows.Forms.RichTextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -61,12 +67,6 @@
             this.textBoxPool = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.listViewAuftrag = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -132,22 +132,22 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Controls.Add(this.buttonChange);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(656, 24);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
-            // button1
+            // buttonChange
             // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 19);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "&Status ändern";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonChange.Location = new System.Drawing.Point(3, 3);
+            this.buttonChange.Name = "buttonChange";
+            this.buttonChange.Size = new System.Drawing.Size(100, 19);
+            this.buttonChange.TabIndex = 2;
+            this.buttonChange.Text = "&Status ändern";
+            this.buttonChange.UseVisualStyleBackColor = true;
+            this.buttonChange.Click += new System.EventHandler(this.buttonChange_Click);
             // 
             // splitContainer1
             // 
@@ -176,6 +176,7 @@
             this.Status});
             this.listViewAufgaben.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewAufgaben.FullRowSelect = true;
+            this.listViewAufgaben.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewAufgaben.Location = new System.Drawing.Point(0, 0);
             this.listViewAufgaben.Name = "listViewAufgaben";
             this.listViewAufgaben.Size = new System.Drawing.Size(656, 206);
@@ -208,7 +209,6 @@
             this.textBoxAufgaben.AcceptsTab = true;
             this.textBoxAufgaben.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxAufgaben.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxAufgaben.Enabled = false;
             this.textBoxAufgaben.Font = new System.Drawing.Font("Lucida Console", 9F);
             this.textBoxAufgaben.Location = new System.Drawing.Point(0, 0);
             this.textBoxAufgaben.Name = "textBoxAufgaben";
@@ -279,12 +279,53 @@
             this.splitContainer2.SplitterDistance = 206;
             this.splitContainer2.TabIndex = 4;
             // 
+            // listViewAuftrag
+            // 
+            this.listViewAuftrag.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader9,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listViewAuftrag.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewAuftrag.FullRowSelect = true;
+            this.listViewAuftrag.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listViewAuftrag.Location = new System.Drawing.Point(0, 0);
+            this.listViewAuftrag.Name = "listViewAuftrag";
+            this.listViewAuftrag.Size = new System.Drawing.Size(656, 206);
+            this.listViewAuftrag.TabIndex = 5;
+            this.listViewAuftrag.UseCompatibleStateImageBehavior = false;
+            this.listViewAuftrag.View = System.Windows.Forms.View.Details;
+            this.listViewAuftrag.SelectedIndexChanged += new System.EventHandler(this.listViewAuftrag_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Nr.";
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Aktion";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "An";
+            this.columnHeader2.Width = 80;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Betreff";
+            this.columnHeader3.Width = 340;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Status";
+            this.columnHeader4.Width = 100;
+            // 
             // textBoxAuftrag
             // 
             this.textBoxAuftrag.AcceptsTab = true;
             this.textBoxAuftrag.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxAuftrag.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxAuftrag.Enabled = false;
             this.textBoxAuftrag.Font = new System.Drawing.Font("Lucida Console", 9F);
             this.textBoxAuftrag.Location = new System.Drawing.Point(0, 0);
             this.textBoxAuftrag.Name = "textBoxAuftrag";
@@ -364,6 +405,7 @@
             this.columnHeader8});
             this.listViewPool.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewPool.FullRowSelect = true;
+            this.listViewPool.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewPool.Location = new System.Drawing.Point(0, 0);
             this.listViewPool.Name = "listViewPool";
             this.listViewPool.Size = new System.Drawing.Size(656, 206);
@@ -396,7 +438,6 @@
             this.textBoxPool.AcceptsTab = true;
             this.textBoxPool.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxPool.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxPool.Enabled = false;
             this.textBoxPool.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPool.Location = new System.Drawing.Point(0, 0);
             this.textBoxPool.Name = "textBoxPool";
@@ -413,49 +454,9 @@
             // 
             this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Text = "Task Mangement System";
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
-            // 
-            // listViewAuftrag
-            // 
-            this.listViewAuftrag.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader9,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.listViewAuftrag.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewAuftrag.FullRowSelect = true;
-            this.listViewAuftrag.Location = new System.Drawing.Point(0, 0);
-            this.listViewAuftrag.Name = "listViewAuftrag";
-            this.listViewAuftrag.Size = new System.Drawing.Size(656, 206);
-            this.listViewAuftrag.TabIndex = 5;
-            this.listViewAuftrag.UseCompatibleStateImageBehavior = false;
-            this.listViewAuftrag.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Nr.";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "An";
-            this.columnHeader2.Width = 80;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Betreff";
-            this.columnHeader3.Width = 340;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Status";
-            this.columnHeader4.Width = 100;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Aktion";
             // 
             // taskManagement
             // 
@@ -463,10 +464,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 388);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MinimumSize = new System.Drawing.Size(692, 426);
             this.Name = "taskManagement";
-            this.Text = "taskManagement";
+            this.Text = "Task Management System";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.taskManagement_FormClosing);
             this.Load += new System.EventHandler(this.taskManagement_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.taskManagement_KeyDown);
             this.tabControl1.ResumeLayout(false);
@@ -501,7 +504,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonChange;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ListView listViewAufgaben;
         private System.Windows.Forms.ColumnHeader Nummer;

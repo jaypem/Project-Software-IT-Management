@@ -17,11 +17,12 @@ namespace Fahrrad_ERP
             listView1.ListViewItemSorter = sorter;
         }
         private List<List<string>> dataList = new List<List<string>>();
+        List<List<string>> dataShortList = new List<List<string>>(); //Liste mit Itemeinträgen nach denen gefiltert werden kann
         private ListViewSortieren sorter = new ListViewSortieren();
 
         private void Mitarbeiter_sehen_Load(object sender, EventArgs e)
         {
-            listview1_Refresh();
+            fill();
         }
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -54,12 +55,11 @@ namespace Fahrrad_ERP
         }        
         private void buttonAn_Click(object sender, EventArgs e)
         {
-            Mitarbeiter_ändern m = new Mitarbeiter_ändern();
-            m.version = 0;
-            if (m.ShowDialog(this) == DialogResult.OK)
+            Mitarbeiter_ändern m = new Mitarbeiter_ändern("Anlegen");
+            if (m.ShowDialog() == DialogResult.OK)
             {
                 ((main)this.MdiParent).Status("Der Mitarbeier " + m.name() + " wurde erfolgreich angelegt.");
-                listview1_Refresh();
+                fill();
             }
             else
             {
@@ -69,20 +69,19 @@ namespace Fahrrad_ERP
         private void buttonBe_Click(object sender, EventArgs e)
         {
             string login = labelLog.Text;
-            Mitarbeiter_ändern m = new Mitarbeiter_ändern();
-            m.version = 1;
+            Mitarbeiter_ändern m = new Mitarbeiter_ändern("Bearbeiten");
             m.login = login;
             if (m.ShowDialog(this) == DialogResult.OK)
             {
                 ((main)this.MdiParent).Status("Die Daten von " + m.name() + " wurde erfolgreich geändert.");
-                listview1_Refresh();
+                fill();
             }
             else
             {
                 ((main)this.MdiParent).Status("Änderung abgebrochen!");
             }
         }
-        public void listview1_Refresh()
+        public void fill()
         {
             string sqlcmd = "SELECT `login`, `Nachname`, `Name`, `abteilung`, `admin`, `ansichtL`, `ansichtV`, `ansichtW` FROM `personal`";
             Database_Fahrrad daten = new Database_Fahrrad();
@@ -92,6 +91,7 @@ namespace Fahrrad_ERP
             {
                 listView1.Items.Add(new ListViewItem(new string[] { list[1].ToString(), list[2].ToString(), list[0].ToString() }));
             }
+            dataShortList = getDataShortList();
             detail(0);
         }
         private void listView1_ColumnClick(object sender, ColumnClickEventArgs e)
@@ -115,6 +115,33 @@ namespace Fahrrad_ERP
                 sorter.Order = SortOrder.Ascending;
             }
             listView1.Sort();
+        }
+
+        private void tb_search_TextChanged(object sender, EventArgs e)
+        {
+            //Bei jeder Textveränderung in der Filter TextBox wird die Listview gefiltert
+            listView1.Items.Clear();
+            ListViewFiltern lf = new ListViewFiltern();
+            foreach (List<string> list in lf.LookFor(dataShortList, tb_search.Text))
+            {
+                listView1.Items.Add(new ListViewItem(list.ToArray()));
+            }
+        }
+        private List<List<string>> getDataShortList()
+        {
+            //Gibt eine Liste mit den Items aus der ListView zurück
+            List<List<string>> Liste = new List<List<string>>();
+            foreach (ListViewItem item in listView1.Items)
+            {
+                List<string> list = new List<string>();
+                for (int i = 0; i < item.SubItems.Count; i++)
+                {
+                    list.Add(item.SubItems[i].Text);
+                }
+                Liste.Add(list.ToList());
+                list.Clear();
+            }
+            return Liste;
         }
     }
 }

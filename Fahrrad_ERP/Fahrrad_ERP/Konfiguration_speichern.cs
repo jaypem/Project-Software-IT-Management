@@ -64,7 +64,7 @@ namespace Fahrrad_ERP
                     str = textBoxBez.Text;
                     sqlcmd = "INSERT INTO konfigurationen (Bezeichnung, KundenID) VALUES ('" + str + "', '" + Kunde + "')";
                     daten.setData(sqlcmd);
-                    sqlcmd = "SELECT KonfigurationID FROM konfigurationen ORDER BY KonfigurationID";
+                    sqlcmd = "SELECT KonfigurationID FROM konfigurationen WHERE Bezeichnung = '"+str+"' AND KundenID = '"+Kunde+"' ORDER BY KonfigurationID";
                     dataList = daten.getData(sqlcmd);
                     KonfID = dataList[dataList.Count - 1][0].ToString();
                     Konf = true;
@@ -74,7 +74,12 @@ namespace Fahrrad_ERP
             {
                 if (validate(3))
                 {
-
+                    string datum = DateTime.Today.ToString("yyyy-MM-dd"); ; 
+                    sqlcmd = "INSERT INTO bestellung (KundenID, Datum) VALUES ('" + Kunde + "', '" + datum + "')";
+                    daten.setData(sqlcmd);
+                    sqlcmd = "SELECT BestellungID FROM bestellung WHERE KundenID = '" + Kunde + "' AND Datum = '" + datum + "' ORDER BY BestellungID";
+                    dataList = daten.getData(sqlcmd);
+                    KonfID = dataList[dataList.Count - 1][0].ToString();
                     Konf = false;
                 }
             }

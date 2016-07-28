@@ -18,6 +18,7 @@ namespace Fahrrad_ERP
 
         private void eigeneDaten_Load(object sender, EventArgs e)
         {
+            //eigene Daten werden geladen und angezeigt
             labelLog.Text = User.login;
             labelName.Text = User.Nachname;
             labelVorname.Text = User.Name;

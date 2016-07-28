@@ -3,49 +3,55 @@
   <Profiles />
   <Settings>
     <Setting Name="Geschäftsführer" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Martin Thrum</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Add1" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Carl-Zeiss-Straße 3</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Add2" Type="System.String" Scope="User">
-      <Value Profile="(Default)">4. OG</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Name" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Mein schöner Fahrradladen GmbH</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="PLZ" Type="System.String" Scope="User">
-      <Value Profile="(Default)">07743</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Ort" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Jena</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Tel" Type="System.String" Scope="User">
-      <Value Profile="(Default)">03641 / 9-0</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Fax" Type="System.String" Scope="User">
-      <Value Profile="(Default)">03641 / 9-1</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Mail" Type="System.String" Scope="User">
-      <Value Profile="(Default)">martin.thrum@uni-jena.de</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Gericht" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Amtsgericht Jena</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Register" Type="System.String" Scope="User">
-      <Value Profile="(Default)">123456</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="UmsatzID" Type="System.String" Scope="User">
-      <Value Profile="(Default)">100100100</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="IBAN" Type="System.String" Scope="User">
-      <Value Profile="(Default)">DE00 1234 4567 8910 1122 3344 55</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="BIC" Type="System.String" Scope="User">
-      <Value Profile="(Default)">DEUTSCHLAND</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Bank" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Deutsche Indialbank</Value>
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Bild" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BildNutzen" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

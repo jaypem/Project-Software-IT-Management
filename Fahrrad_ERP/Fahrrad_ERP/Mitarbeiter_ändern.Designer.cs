@@ -44,8 +44,8 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAb = new System.Windows.Forms.Button();
+            this.buttonOk = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
@@ -241,8 +241,8 @@
             this.tableLayoutPanel1.SetColumnSpan(this.tableLayoutPanel2, 4);
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.buttonAb, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.buttonOk, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 183);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -251,28 +251,27 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(448, 36);
             this.tableLayoutPanel2.TabIndex = 16;
             // 
-            // button2
+            // buttonAb
             // 
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(227, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Abbrechen";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonAb.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonAb.Location = new System.Drawing.Point(227, 3);
+            this.buttonAb.Name = "buttonAb";
+            this.buttonAb.Size = new System.Drawing.Size(136, 23);
+            this.buttonAb.TabIndex = 10;
+            this.buttonAb.Text = "Abbrechen";
+            this.buttonAb.UseVisualStyleBackColor = true;
+            this.buttonAb.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // buttonOk
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(85, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Speichern";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOk.Location = new System.Drawing.Point(85, 3);
+            this.buttonOk.Name = "buttonOk";
+            this.buttonOk.Size = new System.Drawing.Size(136, 23);
+            this.buttonOk.TabIndex = 9;
+            this.buttonOk.Text = "Speichern";
+            this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -288,11 +287,11 @@
             // 
             // Mitarbeiter_ändern
             // 
-            this.AcceptButton = this.button1;
+            this.AcceptButton = this.buttonOk;
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.button2;
+            this.CancelButton = this.buttonAb;
             this.ClientSize = new System.Drawing.Size(454, 222);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximizeBox = false;
@@ -326,8 +325,8 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonOk;
+        private System.Windows.Forms.Button buttonAb;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.ToolTip toolTip1;
     }

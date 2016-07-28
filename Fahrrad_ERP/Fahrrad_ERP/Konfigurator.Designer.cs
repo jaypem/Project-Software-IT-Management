@@ -63,9 +63,9 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 440F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66F));
             this.tableLayoutPanel1.Controls.Add(this.labelKon, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.listViewKonfig, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 1, 1);
@@ -77,7 +77,6 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(884, 434);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
@@ -105,9 +104,9 @@
             this.listViewKonfig.FullRowSelect = true;
             this.listViewKonfig.GridLines = true;
             this.listViewKonfig.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listViewKonfig.Location = new System.Drawing.Point(447, 38);
+            this.listViewKonfig.Location = new System.Drawing.Point(444, 38);
             this.listViewKonfig.Name = "listViewKonfig";
-            this.listViewKonfig.Size = new System.Drawing.Size(434, 393);
+            this.listViewKonfig.Size = new System.Drawing.Size(437, 393);
             this.listViewKonfig.TabIndex = 7;
             this.listViewKonfig.UseCompatibleStateImageBehavior = false;
             this.listViewKonfig.View = System.Windows.Forms.View.Details;
@@ -151,7 +150,7 @@
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.Controls.Add(this.tableLayoutPanel2);
-            this.groupBox1.Location = new System.Drawing.Point(230, 38);
+            this.groupBox1.Location = new System.Drawing.Point(227, 38);
             this.groupBox1.MaximumSize = new System.Drawing.Size(208, 340);
             this.groupBox1.MinimumSize = new System.Drawing.Size(208, 340);
             this.groupBox1.Name = "groupBox1";
@@ -295,7 +294,7 @@
             this.treeViewProd.Location = new System.Drawing.Point(3, 38);
             this.treeViewProd.Name = "treeViewProd";
             this.treeViewProd.ShowNodeToolTips = true;
-            this.treeViewProd.Size = new System.Drawing.Size(218, 393);
+            this.treeViewProd.Size = new System.Drawing.Size(215, 393);
             this.treeViewProd.TabIndex = 5;
             this.treeViewProd.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewProd_BeforeSelect);
             this.treeViewProd.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewProd_AfterSelect);
@@ -306,7 +305,7 @@
             this.labelSum.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelSum.AutoSize = true;
             this.labelSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSum.Location = new System.Drawing.Point(447, 7);
+            this.labelSum.Location = new System.Drawing.Point(444, 7);
             this.labelSum.Name = "labelSum";
             this.labelSum.Size = new System.Drawing.Size(129, 20);
             this.labelSum.TabIndex = 6;
@@ -331,6 +330,7 @@
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
+            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
             // 
             // Konfigurator
             // 
@@ -338,6 +338,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 434);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(900, 472);
             this.Name = "Konfigurator";
             this.Text = "Konfigurator";
             this.Load += new System.EventHandler(this.Konfigurator_Load);

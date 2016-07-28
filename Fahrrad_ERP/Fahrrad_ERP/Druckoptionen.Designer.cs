@@ -33,8 +33,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonMono = new System.Windows.Forms.RadioButton();
+            this.radioButtonColor = new System.Windows.Forms.RadioButton();
             this.buttonOk = new System.Windows.Forms.Button();
             this.buttonAb = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -96,29 +96,29 @@
             0,
             0});
             // 
-            // radioButton1
+            // radioButtonMono
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButton1.Location = new System.Drawing.Point(104, 73);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(97, 18);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "schwarz/weiß";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonMono.AutoSize = true;
+            this.radioButtonMono.Checked = true;
+            this.radioButtonMono.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radioButtonMono.Location = new System.Drawing.Point(104, 73);
+            this.radioButtonMono.Name = "radioButtonMono";
+            this.radioButtonMono.Size = new System.Drawing.Size(97, 18);
+            this.radioButtonMono.TabIndex = 5;
+            this.radioButtonMono.TabStop = true;
+            this.radioButtonMono.Text = "schwarz/weiß";
+            this.radioButtonMono.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonColor
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButton2.Location = new System.Drawing.Point(231, 73);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(57, 18);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.Text = "farbig";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonColor.AutoSize = true;
+            this.radioButtonColor.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radioButtonColor.Location = new System.Drawing.Point(231, 73);
+            this.radioButtonColor.Name = "radioButtonColor";
+            this.radioButtonColor.Size = new System.Drawing.Size(57, 18);
+            this.radioButtonColor.TabIndex = 6;
+            this.radioButtonColor.Text = "farbig";
+            this.radioButtonColor.UseVisualStyleBackColor = true;
             // 
             // buttonOk
             // 
@@ -149,8 +149,8 @@
             this.ClientSize = new System.Drawing.Size(334, 142);
             this.Controls.Add(this.buttonAb);
             this.Controls.Add(this.buttonOk);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButtonColor);
+            this.Controls.Add(this.radioButtonMono);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
@@ -176,8 +176,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButtonMono;
+        private System.Windows.Forms.RadioButton radioButtonColor;
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.Button buttonAb;
     }

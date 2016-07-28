@@ -11,6 +11,7 @@ namespace Fahrrad_ERP
 {
     public class Database_Fahrrad
     {
+        //Verbindungszeichenfolge für den Webserver
         string con_string = "SERVER=5.230.134.175; " +
                             "DATABASE=fahrrad_niko; " +
                             "UID=sit_niko; " +
@@ -19,6 +20,7 @@ namespace Fahrrad_ERP
 
         public void setData(string command)
         {
+            //Der übergebene command wird in die Datenbank geschrieben (es wird keine Rückgabe aus der DB erfolgen)
             MySqlConnection mycon = new MySqlConnection(con_string);
             MySqlCommand comm = mycon.CreateCommand();
             comm.CommandText = command;
@@ -36,6 +38,7 @@ namespace Fahrrad_ERP
 
         public List<List<string>> getData(string command)
         {
+            //Der übergebene command wird Daten aus der DB zurückgeben, welche dann als List<List<string>> zurückgegeben werden!
             MySqlConnection mycon = new MySqlConnection(con_string);
             MySqlCommand comm = mycon.CreateCommand();
             comm.CommandText = command;

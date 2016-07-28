@@ -19,6 +19,7 @@ namespace Fahrrad_ERP
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
+            //Passwort wird überprüft und gegebenenfalls die MainForm geöffnet
             string pw = getPasswort(textBoxUser.Text);
             if (textBoxPW.Text == pw && pw != "")
             {
@@ -39,10 +40,12 @@ namespace Fahrrad_ERP
 
         private void buttonAB_Click(object sender, EventArgs e)
         {
+            //abbrechen führt zum Beenden der Anwendung
             Application.Exit();
         }
         private string getPasswort(string login)
         {
+            //Passwort holen, wenn es keines gibt wird ein leerer String zurückgegeben
             List<List<string>> strList = new List<List<string>>();
             string sqlcmd = "SELECT `passwort` FROM `personal` WHERE `login` LIKE '"+login+"'";
             Database_Fahrrad daten = new Database_Fahrrad();
@@ -62,6 +65,7 @@ namespace Fahrrad_ERP
         
         private void Anmeldung_Load(object sender, EventArgs e)
         {
+            //verhindern, dass das Fenster manipuliert werden kann, (mini/maximieren)
             this.ControlBox = false;
         }
     }

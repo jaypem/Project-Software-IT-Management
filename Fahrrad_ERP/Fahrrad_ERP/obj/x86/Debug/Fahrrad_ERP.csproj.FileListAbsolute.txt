@@ -44,3 +44,68 @@ C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.taskM.newTask.resources
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.taskM.changeStatus.resources
 C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Wareneingang.resources
+E:\Fahrrad_ERP\Fahrrad_ERP\bin\Debug\Fahrrad_ERP.exe.config
+E:\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.exe
+E:\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.pdb
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\bin\Debug\Fahrrad_ERP.exe.config
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.exe
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.pdb
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\bin\Debug\Fahrrad_ERP.exe
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\bin\Debug\Fahrrad_ERP.pdb
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\bin\Debug\MySql.Data.dll
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.csprojResolveAssemblyReference.cache
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Anmeldung.resources
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Auswahl.resources
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Druckoptionen.resources
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.eigeneDaten.resources
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Geschäftsdaten.resources
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Konfiguration_speichern.resources
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Konfigurator.resources
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Mitarbeiter_ändern.resources
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.main.resources
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Mitarbeiter_Ansicht.resources
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Passwort.resources
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Properties.Resources.resources
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Rechnung.resources
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.taskM.changeStatus.resources
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.taskM.newTask.resources
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.taskManagement.resources
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.csproj.GenerateResource.Cache
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Warenlager.resources
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Kunde_ändern.resources
+C:\Users\x\Documents\IT-Projects\Project SIT\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Kunden_Ansicht.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\bin\Debug\Fahrrad_ERP.exe.config
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.exe
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.pdb
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\bin\Debug\Fahrrad_ERP.exe
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\bin\Debug\Fahrrad_ERP.pdb
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\bin\Debug\MySql.Data.dll
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.csprojResolveAssemblyReference.cache
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Anmeldung.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Auswahl.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Druckoptionen.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.eigeneDaten.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Geschäftsdaten.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Konfiguration_speichern.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Konfigurator.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Kunde_ändern.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Kunden_Ansicht.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Mitarbeiter_ändern.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.main.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Mitarbeiter_Ansicht.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Passwort.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Properties.Resources.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Rechnung.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.taskM.changeStatus.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.taskM.newTask.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.taskManagement.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Warenlager.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.csproj.GenerateResource.Cache
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Konfigurator_Einstellungen.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Material_ändern.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.Material_Ansicht.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\bin\Debug\Fahrrad_ERP.exe.manifest
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\bin\Debug\Fahrrad_ERP.application
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.AboutBox1.resources
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.exe.manifest
+C:\Users\nbadmin\Desktop\Nikolaas\IT-Management\Fahrrad_ERP\Fahrrad_ERP\obj\x86\Debug\Fahrrad_ERP.application

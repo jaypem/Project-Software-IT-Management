@@ -32,6 +32,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonWahl = new System.Windows.Forms.Button();
+            this.buttonBearbeiten = new System.Windows.Forms.Button();
+            this.buttonFertig = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -78,6 +80,8 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.buttonWahl);
+            this.flowLayoutPanel1.Controls.Add(this.buttonBearbeiten);
+            this.flowLayoutPanel1.Controls.Add(this.buttonFertig);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(437, 29);
@@ -93,6 +97,27 @@
             this.buttonWahl.Text = "Bestellung wählen";
             this.buttonWahl.UseVisualStyleBackColor = true;
             this.buttonWahl.Click += new System.EventHandler(this.buttonWahl_Click);
+            // 
+            // buttonBearbeiten
+            // 
+            this.buttonBearbeiten.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonBearbeiten.Location = new System.Drawing.Point(143, 3);
+            this.buttonBearbeiten.Name = "buttonBearbeiten";
+            this.buttonBearbeiten.Size = new System.Drawing.Size(134, 23);
+            this.buttonBearbeiten.TabIndex = 2;
+            this.buttonBearbeiten.Text = "Bestellung bearbeiten";
+            this.buttonBearbeiten.UseVisualStyleBackColor = true;
+            this.buttonBearbeiten.Click += new System.EventHandler(this.buttonBearbeiten_Click);
+            // 
+            // buttonFertig
+            // 
+            this.buttonFertig.Location = new System.Drawing.Point(283, 3);
+            this.buttonFertig.Name = "buttonFertig";
+            this.buttonFertig.Size = new System.Drawing.Size(134, 23);
+            this.buttonFertig.TabIndex = 1;
+            this.buttonFertig.Text = "Fertigstellung melden";
+            this.buttonFertig.UseVisualStyleBackColor = true;
+            this.buttonFertig.Click += new System.EventHandler(this.buttonFertig_Click);
             // 
             // groupBox1
             // 
@@ -286,6 +311,7 @@
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
+            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
             // 
             // printDialog1
             // 
@@ -300,6 +326,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Rechnung";
             this.Text = "Rechnung";
+            this.Load += new System.EventHandler(this.Rechnung_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -334,5 +361,7 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Button buttonFertig;
+        private System.Windows.Forms.Button buttonBearbeiten;
     }
 }

@@ -24,9 +24,14 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <TargetCulture>de-DE</TargetCulture>
+    <ProductName>Bike Shop Enterprise-Resource-Planning System</ProductName>
+    <PublisherName>N. Fedchenheuer, S. Lutter, J.P. Müller</PublisherName>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -51,6 +56,21 @@
   <PropertyGroup>
     <StartupObject>Fahrrad_ERP.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>RadIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F3308A19C46236F4287A6A76D9DB5AD3A6698B8A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Fahrrad_ERP_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
       <HintPath>..\packages\MySql.Data.6.9.8\lib\net40\MySql.Data.dll</HintPath>
@@ -69,6 +89,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Anmeldung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,7 +151,38 @@
     <Compile Include="Konfigurator.Designer.cs">
       <DependentUpon>Konfigurator.cs</DependentUpon>
     </Compile>
+    <Compile Include="Konfigurator_Einstellungen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Konfigurator_Einstellungen.Designer.cs">
+      <DependentUpon>Konfigurator_Einstellungen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kunde ändern.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kunde ändern.Designer.cs">
+      <DependentUpon>Kunde ändern.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kunden_Ansicht.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kunden_Ansicht.Designer.cs">
+      <DependentUpon>Kunden_Ansicht.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewFiltern.cs" />
     <Compile Include="ListViewSortieren.cs" />
+    <Compile Include="Material_ändern.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material_ändern.designer.cs">
+      <DependentUpon>Material_ändern.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Material_Ansicht.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material_Ansicht.designer.cs">
+      <DependentUpon>Material_Ansicht.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mitarbeiter_ändern.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,12 +235,15 @@
       <DependentUpon>taskManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
-    <Compile Include="Wareneingang.cs">
+    <Compile Include="Warenlager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Wareneingang.designer.cs">
-      <DependentUpon>Wareneingang.cs</DependentUpon>
+    <Compile Include="Warenlager.designer.cs">
+      <DependentUpon>Warenlager.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Anmeldung.resx">
       <DependentUpon>Anmeldung.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +264,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Konfigurator.resx">
       <DependentUpon>Konfigurator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Konfigurator_Einstellungen.resx">
+      <DependentUpon>Konfigurator_Einstellungen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kunde ändern.resx">
+      <DependentUpon>Kunde ändern.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kunden_Ansicht.resx">
+      <DependentUpon>Kunden_Ansicht.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material_ändern.resx">
+      <DependentUpon>Material_ändern.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material_Ansicht.resx">
+      <DependentUpon>Material_Ansicht.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mitarbeiter_ändern.resx">
       <DependentUpon>Mitarbeiter_ändern.cs</DependentUpon>
@@ -238,8 +313,8 @@
     <EmbeddedResource Include="taskM\taskManagement.resx">
       <DependentUpon>taskManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Wareneingang.resx">
-      <DependentUpon>Wareneingang.cs</DependentUpon>
+    <EmbeddedResource Include="Warenlager.resx">
+      <DependentUpon>Warenlager.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Daten.settings">
@@ -250,6 +325,7 @@
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Druckeinstellungen.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Fahrrad_ERP_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -292,6 +368,9 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RadIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
